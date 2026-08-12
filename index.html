@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COATS | Alta Costura Profissional de Luxo</title>
+    <meta name="description" content="Descubra a coleção de jalecos e scrubs premium da COATS. Peças de alta costura com caimento perfeito, tecidos tecnológicos e botões artesanais.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <div class="promo-slider">
+            <span class="promo-text">🎁 Primeira compra? Use o cupom: <strong class="coupon">CHIC5</strong></span>
+            <span class="promo-text" style="display: none;">✨ Frete grátis para compras acima de R$ 600</span>
+            <span class="promo-text" style="display: none;">💎 Parcelamento em até 10x sem juros ou 5% OFF no Pix</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Menu Principal">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="COATS" class="logo-img">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#alfaiataria" class="nav-link">Legado 10 Anos</a></li>
+                    <li><a href="#alfaiataria" class="nav-link">Jalecos em Alfaiataria</a></li>
+                    <li class="dropdown">
+                        <a href="#profissoes" class="nav-link dropdown-toggle">Profissões 
+                            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#profissoes">Medicina</a></li>
+                            <li><a href="#profissoes">Odontologia</a></li>
+                            <li><a href="#profissoes">Estética & Bem-estar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#produtos" class="nav-link dropdown-toggle">Scrubs Femininos
+                            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#produtos">Scrubs Premium</a></li>
+                            <li><a href="#produtos">Coleção Fresh</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#produtos" class="nav-link highlight-sale">FlashSale até 60%</a></li>
+                    <li><a href="#conceito" class="nav-link">Made In Chic</a></li>
+                </ul>
+            </nav>
+
+            <!-- Actions -->
+            <div class="header-actions">
+                <button class="action-btn search-toggle" aria-label="Buscar">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <a href="#login" class="action-btn account-link" aria-label="Minha Conta">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <button class="action-btn cart-toggle" aria-label="Carrinho">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Drawer (Mobile) -->
+    <div class="mobile-nav-drawer">
+        <div class="drawer-header">
+            <span class="drawer-title">Menu</span>
+            <button class="close-drawer-btn" aria-label="Fechar Menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#" class="mobile-nav-link">Home</a></li>
+            <li><a href="#alfaiataria" class="mobile-nav-link">Legado 10 Anos</a></li>
+            <li><a href="#alfaiataria" class="mobile-nav-link">Jalecos em Alfaiataria</a></li>
+            <li><a href="#profissoes" class="mobile-nav-link">Profissões</a></li>
+            <li><a href="#produtos" class="mobile-nav-link">Scrubs Femininos</a></li>
+            <li><a href="#produtos" class="mobile-nav-link highlight-sale">FlashSale até 60%</a></li>
+            <li><a href="#conceito" class="mobile-nav-link">Made In Chic</a></li>
+        </ul>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="O que você está procurando?" aria-label="Campo de busca">
+            <button class="close-search-btn" aria-label="Fechar Busca">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Drawer -->
+    <div class="cart-drawer">
+        <div class="drawer-header">
+            <span class="drawer-title">Sacola de Compras</span>
+            <button class="close-cart-btn" aria-label="Fechar Sacola">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-content">
+            <!-- Empty Cart state -->
+            <div class="empty-cart-message">
+                <p>Sua sacola está vazia.</p>
+                <a href="#produtos" class="btn btn-primary close-cart-btn-link">Ver Coleção</a>
+            </div>
+            <!-- Cart items list (populated via JS) -->
+            <div class="cart-items-list" style="display: none;"></div>
+        </div>
+        <div class="cart-footer" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span class="subtotal-val">R$ 0,00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-slide active">
+                <div class="hero-image" style="background-image: url('images/hero_doctor.png');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag animate-in">Últimas horas</span>
+                    <h1 class="hero-title animate-in">LEGADO</h1>
+                    <p class="hero-description animate-in">Os ícones da marca com condição exclusiva de aniversário.</p>
+                    <a href="#produtos" class="btn btn-outline animate-in">APROVEITE AGORA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Info Bar -->
+        <section class="info-bar">
+            <div class="info-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                <span>Frete fixo expresso</span>
+            </div>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Ambiente 100% seguro</span>
+            </div>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                </svg>
+                <span>Primeira troca grátis</span>
+            </div>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                </svg>
+                <span>Em até 10x sem juros</span>
+            </div>
+        </section>
+
+        <!-- Concept Section / Video Carousel teaser -->
+        <section id="conceito" class="concept-section">
+            <div class="section-header text-center">
+                <span class="section-tag">Coleções & Design</span>
+                <h2 class="section-title">Design Atemporal</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="concept-container">
+                <div class="concept-text-column">
+                    <h3 class="concept-subtitle">Feito com paixão. Feito no Brasil.</h3>
+                    <p class="concept-desc">Cada costura e cada detalhe da nossa alfaiataria é pensado para valorizar a postura do profissional de saúde. Unimos tecidos tecnológicos com acabamentos de luxo para trazer conforto absoluto para as suas longas jornadas de trabalho.</p>
+                    <ul class="concept-features">
+                        <li><span>Caimento Perfeito sob medida visual</span></li>
+                        <li><span>Tecidos com proteção UV e de rápida secagem</span></li>
+                        <li><span>Modelagem exclusiva desenvolvida por estilistas</span></li>
+                    </ul>
+                </div>
+                <div class="concept-image-column">
+                    <div class="image-wrapper hover-zoom">
+                        <img src="images/category_banner.png" alt="Colaboração médica Jaleco Chic">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Split Editorial Section ("Alfaiataria Chic") -->
+        <section id="alfaiataria" class="split-editorial">
+            <div class="split-left">
+                <img src="images/fabric_detail.png" alt="Detalhe dos botões artesanais de ouro da Jaleco Chic">
+            </div>
+            <div class="split-right">
+                <div class="editorial-box">
+                    <div class="editorial-logo">
+                        <img src="images/alfaiataria_coat.png" alt="Jaleco Alfaiataria em Cabide" class="editorial-mini">
+                    </div>
+                    <h2 class="editorial-title">Alfaiataria Chic</h2>
+                    <p class="editorial-desc">A união sublime de botões dourados ricamente desenhados, lapelas estruturadas e forros premium. Uma verdadeira declaração de profissionalismo e estilo no seu dia a dia.</p>
+                    <a href="#produtos" class="btn btn-primary">EXPLORAR DETALHES</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professions Grid -->
+        <section id="profissoes" class="professions-section">
+            <div class="section-header text-center">
+                <span class="section-tag">Encontre sua identidade</span>
+                <h2 class="section-title">Nossas Profissões</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="professions-grid">
+                <!-- Profession 1 -->
+                <div class="profession-card hover-zoom">
+                    <img src="images/profession_medicine.png" alt="Médica vestindo Jaleco de Luxo">
+                    <div class="profession-overlay">
+                        <div class="profession-info">
+                            <h3>Medicina</h3>
+                            <span class="btn-text">Ver Coleção</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profession 2 -->
+                <div class="profession-card hover-zoom">
+                    <img src="images/profession_dentistry.png" alt="Dentista vestindo Jaleco Premium">
+                    <div class="profession-overlay">
+                        <div class="profession-info">
+                            <h3>Odontologia</h3>
+                            <span class="btn-text">Ver Coleção</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profession 3 -->
+                <div class="profession-card hover-zoom">
+                    <img src="images/profession_esthetics.png" alt="Esteticista em Clínica de Luxo">
+                    <div class="profession-overlay">
+                        <div class="profession-info">
+                            <h3>Estética & Spa</h3>
+                            <span class="btn-text">Ver Coleção</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="produtos" class="products-section">
+            <div class="section-header text-center">
+                <span class="section-tag">Os mais desejados</span>
+                <h2 class="section-title">Nossos Destaques</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="1" data-name="Jaleco Feminino Julie" data-price="520.00" data-img="images/product_julie.png">
+                    <div class="product-image-container">
+                        <img src="images/product_julie.png" alt="Jaleco Feminino Julie" class="product-img">
+                        <span class="badge badge-sale">-20%</span>
+                        <button class="quick-add-btn" aria-label="Adicionar ao Carrinho">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Jaleco Feminino Julie</h3>
+                        <div class="product-pricing">
+                            <span class="original-price">R$ 650,00</span>
+                            <span class="sale-price">R$ 520,00</span>
+                        </div>
+                        <p class="pix-price">R$ 494,00 com Pix</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-id="2" data-name="Jaleco Feminino Celina" data-price="520.00" data-img="images/product_celina.png">
+                    <div class="product-image-container">
+                        <img src="images/product_celina.png" alt="Jaleco Feminino Celina" class="product-img">
+                        <span class="badge badge-new">Novidade</span>
+                        <button class="quick-add-btn" aria-label="Adicionar ao Carrinho">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Jaleco Feminino Celina</h3>
+                        <div class="product-pricing">
+                            <span class="original-price">R$ 620,00</span>
+                            <span class="sale-price">R$ 520,00</span>
+                        </div>
+                        <p class="pix-price">R$ 494,00 com Pix</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-id="3" data-name="Jaleco Feminino Elizabeth" data-price="520.00" data-img="images/product_elizabeth.png">
+                    <div class="product-image-container">
+                        <img src="images/product_elizabeth.png" alt="Jaleco Feminino Elizabeth" class="product-img">
+                        <button class="quick-add-btn" aria-label="Adicionar ao Carrinho">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Jaleco Feminino Elizabeth</h3>
+                        <div class="product-pricing">
+                            <span class="original-price">R$ 590,00</span>
+                            <span class="sale-price">R$ 520,00</span>
+                        </div>
+                        <p class="pix-price">R$ 494,00 com Pix</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-id="4" data-name="Scrub Feminino Rose" data-price="320.00" data-img="images/product_scrub_rose.png">
+                    <div class="product-image-container">
+                        <img src="images/product_scrub_rose.png" alt="Scrub Feminino Rose" class="product-img">
+                        <span class="badge badge-sale">-18%</span>
+                        <button class="quick-add-btn" aria-label="Adicionar ao Carrinho">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Scrub Feminino Rose</h3>
+                        <div class="product-pricing">
+                            <span class="original-price">R$ 390,00</span>
+                            <span class="sale-price">R$ 320,00</span>
+                        </div>
+                        <p class="pix-price">R$ 304,00 com Pix</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials (Social Proof) -->
+        <section class="testimonials-section">
+            <div class="section-header text-center">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">Opiniões de Quem Usa</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="testimonials-slider-container">
+                <div class="testimonials-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-quote">"O jaleco Julie tem um caimento indescritível. Os botões de flor são verdadeiras jóias, todo mundo me pergunta no consultório onde comprei. Qualidade absurda!"</p>
+                        <span class="testimonial-author">Dra. Evelyn Reed — Cardiologista</span>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-quote">"Trabalho com estética avançada e preciso passar uma imagem refinada. Os modelos em alfaiataria da Jaleco Chic mudaram completamente o meu posicionamento profissional."</p>
+                        <span class="testimonial-author">Dra. Alisha Sharma — Dermatologista</span>
+                    </div>
+                </div>
+                <div class="testimonial-arrows">
+                    <button class="testimonial-arrow prev-slide" aria-label="Anterior">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="testimonial-arrow next-slide" aria-label="Próximo">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h2 class="newsletter-title">Junte-se ao Universo Chic</h2>
+                <p class="newsletter-desc">Cadastre seu e-mail para receber convites para pré-lançamentos, novidades exclusivas e cupons de desconto.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required aria-label="Endereço de e-mail">
+                    <button type="submit" class="btn btn-primary newsletter-btn">INSCREVER-SE</button>
+                </form>
+                <div id="newsletterSuccess" class="newsletter-success" style="display: none;">
+                    Obrigado por se inscrever! Fique atenta ao seu e-mail.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-column brand-info">
+                <a href="#" class="logo footer-logo">
+                    <img src="images/logo.png" alt="COATS" class="logo-img footer-logo-img">
+                </a>
+                <p class="brand-desc">A marca pioneira na criação de moda de luxo aplicada à saúde. Desenhando a elegância do jaleco médico há mais de 10 anos.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 22a9 9 0 0 1-2.12-9.36M12 2a9 9 0 0 1 9 9c0 4.2-2.8 7.5-6.5 8.5-1-.2-1.5-.7-1.5-1.2v-2c0-.5-.2-1-.5-1.2 2.5-.3 5.2-1.2 5.2-5.7 0-1.3-.4-2.4-1.2-3.2.1-.3.5-1.5-.1-3.2 0 0-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C5.3 4.5 4.3 4.8 4.3 4.8c-.6 1.7-.2 2.9-.1 3.2-.8.8-1.2 1.9-1.2 3.2 0 4.5 2.7 5.4 5.2 5.7-.3.2-.5.7-.5 1.2v2.8c0 .5-.5 1-1.5 1.2A9 9 0 0 1 8 22z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Coleções</h3>
+                <ul>
+                    <li><a href="#alfaiataria">Coleção Legado</a></li>
+                    <li><a href="#alfaiataria">Jalecos Premium</a></li>
+                    <li><a href="#produtos">Scrubs Tecnológicos</a></li>
+                    <li><a href="#produtos">Linha Casual</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ajuda & Suporte</h3>
+                <ul>
+                    <li><a href="#">Guia de Medidas</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Formas de Pagamento</h3>
+                <div class="payment-badges">
+                    <span class="badge-pay">Pix</span>
+                    <span class="badge-pay">Visa</span>
+                    <span class="badge-pay">Mastercard</span>
+                    <span class="badge-pay">Elo</span>
+                    <span class="badge-pay">Amex</span>
+                </div>
+                <h3 style="margin-top: 20px;">Segurança</h3>
+                <div class="security-badges">
+                    <span class="badge-sec">SSL Protegido</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 COATS. Desenvolvido para médicos inspiradores. Made In Chic.</p>
+        </div>
+    </footer>
+
+    <!-- Floater WhatsApp Button -->
+    <a href="https://wa.me/5500000000000" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.936 9.936 0 0 0 4.779 1.218h.004c5.506 0 9.99-4.478 9.99-9.985C22.007 6.478 17.519 2 12.012 2zm5.772 14.154c-.237.669-1.377 1.29-1.923 1.377-.497.08-1.147.14-3.324-.76-2.784-1.151-4.582-3.99-4.722-4.177-.138-.187-1.127-1.498-1.127-2.858 0-1.36.711-2.028.963-2.296.252-.268.552-.335.736-.335.184 0 .367.002.527.01.166.008.391-.063.612.467.228.549.78 1.902.848 2.039.068.138.114.3.023.483-.092.184-.138.3-.275.46-.138.16-.29.358-.413.48-.138.138-.282.289-.122.565.16.276.711 1.173 1.526 1.898.815.725 1.503.95 1.716 1.053.214.103.338.087.464-.061.126-.148.55-.641.696-.86.147-.22.294-.183.498-.107.203.076 1.29.609 1.514.721.224.112.373.168.429.263.056.096.056.554-.181 1.223z"/>
+        </svg>
+    </a>
+
+    <!-- Simple Toast Notification for Shopping Actions -->
+    <div id="toast" class="toast-notification"></div>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
