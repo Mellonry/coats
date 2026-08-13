@@ -929,84 +929,204 @@ section {
 }
 
 /* ==========================================================================
-   PROFESSIONS SECTION
+   EMBROIDERY (BORDADOS) SECTION
    ========================================================================== */
-.professions-section {
+.embroidery-section {
     max-width: var(--max-width);
-    margin: 0 auto;
-}
-
-.professions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.profession-card {
-    height: 480px;
+    margin: 0 auto 60px;
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: 80px 60px;
     position: relative;
-    cursor: pointer;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+    overflow: hidden;
 }
 
-.profession-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.embroidery-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.profession-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(28, 26, 25, 0.4);
+.embroidery-text-column {
+    padding-right: 20px;
+}
+
+.embroidery-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.embroidery-desc {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.embroidery-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #1C1A19;
+    color: var(--color-bg-white);
+    border: 1px solid var(--color-primary);
+    padding: 16px 36px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+}
+
+.embroidery-whatsapp-btn:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-primary);
+}
+
+.embroidery-whatsapp-btn svg {
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.embroidery-whatsapp-btn:hover svg {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.embroidery-options-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.embroidery-option-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.embroidery-option-card:hover {
+    border-color: var(--color-gold);
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(28,26,25,0.03);
+}
+
+.embroidery-option-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding: 40px;
-    opacity: 0.9;
-    transition: var(--transition-smooth);
-}
-
-.profession-info {
-    text-align: center;
-    color: var(--color-bg-white);
-    transform: translateY(20px);
-    transition: var(--transition-smooth);
-}
-
-.profession-info h3 {
-    font-family: var(--font-title);
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 12px;
-    letter-spacing: 0.05em;
-}
-
-.profession-info .btn-text {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+    align-items: center;
     color: var(--color-gold);
+    flex-shrink: 0;
+}
+
+.embroidery-option-info {
+    flex: 1;
+}
+
+.embroidery-option-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     font-weight: 600;
-    display: inline-block;
-    opacity: 0;
+    margin-bottom: 6px;
+    color: var(--color-primary);
+}
+
+.embroidery-option-desc {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.embroidery-preview-sample {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-gold);
+    border-left: 2px solid var(--color-gold);
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.embroidery-preview-sans {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+/* Product Filter Tabs */
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.tab-btn {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    padding: 10px 0;
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+    color: var(--color-primary);
+}
+
+.tab-btn.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-bottom-color: var(--color-gold);
+}
+
+/* Pagination Load More */
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.load-more-btn {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+    padding: 16px 45px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     transition: var(--transition-smooth);
 }
 
-/* Hover effects */
-.profession-card:hover .profession-overlay {
-    background-color: rgba(28, 26, 25, 0.7);
-}
-
-.profession-card:hover .profession-info {
-    transform: translateY(0);
-}
-
-.profession-card:hover .profession-info .btn-text {
-    opacity: 1;
+.load-more-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
 }
 
 /* ==========================================================================
@@ -1533,13 +1653,18 @@ section {
         padding: 50px 8%;
     }
     
-    .professions-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .embroidery-section {
+        padding: 50px 30px;
     }
     
-    .profession-card {
-        height: 350px;
+    .embroidery-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .embroidery-text-column {
+        padding-right: 0;
+        text-align: center;
     }
     
     .products-grid {
@@ -1555,6 +1680,17 @@ section {
 
 
 @media (max-width: 576px) {
+    .embroidery-option-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .embroidery-option-icon {
+        margin: 0 auto;
+    }
+
     .hero-content {
         align-items: center;
         text-align: center;
