@@ -173,105 +173,283 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // ==========================================================================
-    // PRODUCTS DATABASE
+    // PRODUCTS DATABASE (Cleaned & Grouped Models with Portfolio Galleries)
     // ==========================================================================
     const products = [
-        // JALECOS (52 items)
-        { id: "J0016", name: "Jaleco Eliza (0016)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0016.webp", category: "jaleco", badge: "-20%" },
-        { id: "J0018", name: "Jaleco Eliza (0018)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0018.webp", category: "jaleco", badge: "Novidade" },
-        { id: "J0022", name: "Jaleco Eliza (0022)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0022.webp", category: "jaleco", badge: "" },
-        { id: "J0024", name: "Jaleco João (0024)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0024.webp", category: "jaleco", badge: "" },
-        { id: "J0027", name: "Jaleco João (0027)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0027.webp", category: "jaleco", badge: "" },
-        { id: "J0038", name: "Jaleco Rubens (0038)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0038.webp", category: "jaleco", badge: "" },
-        { id: "J0041", name: "Jaleco Eliza (0041)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0041.webp", category: "jaleco", badge: "" },
-        { id: "J0046", name: "Jaleco Rubens e André (0046)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0046.webp", category: "jaleco", badge: "" },
-        { id: "J0052", name: "Jaleco Rubens e André (0052)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0052.webp", category: "jaleco", badge: "" },
-        { id: "J0057", name: "Jaleco André (0057)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0057.webp", category: "jaleco", badge: "" },
-        { id: "J0059", name: "Jaleco Rubens (0059)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0059.webp", category: "jaleco", badge: "" },
-        { id: "J0061", name: "Jaleco Rubens (0061)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0061.webp", category: "jaleco", badge: "" },
-        { id: "J0065", name: "Jaleco Rubens (0065)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0065.webp", category: "jaleco", badge: "" },
-        { id: "J0067", name: "Jaleco André (0067)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0067.webp", category: "jaleco", badge: "" },
-        { id: "J0069", name: "Jaleco André (0069)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0069.webp", category: "jaleco", badge: "" },
-        { id: "J0072", name: "Jaleco André (0072)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0072.webp", category: "jaleco", badge: "" },
-        { id: "J0079", name: "Jaleco Coats (0079)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0079.webp", category: "jaleco", badge: "" },
-        { id: "J0086", name: "Jaleco Alice (0086)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0086.webp", category: "jaleco", badge: "" },
-        { id: "J0089", name: "Jaleco Alice (0089)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0089.webp", category: "jaleco", badge: "" },
-        { id: "J0093", name: "Jaleco Alice (0093)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0093.webp", category: "jaleco", badge: "" },
-        { id: "J0107", name: "Jaleco Katherine (0107)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0107.webp", category: "jaleco", badge: "" },
-        { id: "J0108", name: "Jaleco Alice (0108)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0108.webp", category: "jaleco", badge: "" },
-        { id: "J0110", name: "Jaleco Katherine (0110)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0110.webp", category: "jaleco", badge: "" },
-        { id: "J0116", name: "Jaleco Katherine (0116)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0116.webp", category: "jaleco", badge: "" },
-        { id: "J0118", name: "Jaleco Lise (0118)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0118.webp", category: "jaleco", badge: "" },
-        { id: "J0123", name: "Jaleco Lise (0123)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0123.webp", category: "jaleco", badge: "" },
-        { id: "J0132", name: "Jaleco Lise (0132)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0132.webp", category: "jaleco", badge: "" },
-        { id: "J0133", name: "Jaleco Lise (0133)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0133.webp", category: "jaleco", badge: "" },
-        { id: "J0139", name: "Jaleco Bell (0139)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0139.webp", category: "jaleco", badge: "" },
-        { id: "J0144", name: "Jaleco Bell (0144)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0144.webp", category: "jaleco", badge: "" },
-        { id: "J0146", name: "Jaleco Bell (0146)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0146.webp", category: "jaleco", badge: "" },
-        { id: "J0147", name: "Jaleco Bell (0147)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0147.webp", category: "jaleco", badge: "" },
-        { id: "J0166", name: "Jaleco Lise (0166)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0166.webp", category: "jaleco", badge: "" },
-        { id: "J0169", name: "Jaleco Lise (0169)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0169.webp", category: "jaleco", badge: "" },
-        { id: "J0171", name: "Jaleco Lise (0171)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0171.webp", category: "jaleco", badge: "" },
-        { id: "J0173", name: "Jaleco Lise (0173)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0173.webp", category: "jaleco", badge: "" },
-        { id: "J0185", name: "Jaleco Katherine (0185)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0185.webp", category: "jaleco", badge: "" },
-        { id: "J0190", name: "Jaleco Katherine (0190)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0190.webp", category: "jaleco", badge: "" },
-        { id: "J0200", name: "Jaleco Katherine (0200)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0200.webp", category: "jaleco", badge: "" },
-        { id: "J0211", name: "Jaleco André (0211)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0211.webp", category: "jaleco", badge: "" },
-        { id: "J0213", name: "Jaleco Coats (0213)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0213.webp", category: "jaleco", badge: "" },
-        { id: "J0221", name: "Jaleco Coats (0221)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0221.webp", category: "jaleco", badge: "" },
-        { id: "J0229", name: "Jaleco Eliza (0229)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0229.webp", category: "jaleco", badge: "" },
-        { id: "J0230", name: "Jaleco Eliza (0230)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0230.webp", category: "jaleco", badge: "" },
-        { id: "J0233", name: "Jaleco Eliza (0233)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0233.webp", category: "jaleco", badge: "" },
-        { id: "J0244", name: "Jaleco Lise c/s cinto (0244)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0244.webp", category: "jaleco", badge: "" },
-        { id: "J0251", name: "Jaleco Lise c/s cinto (0251)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0251.webp", category: "jaleco", badge: "" },
-        { id: "J0258", name: "Jaleco Lise com cinto (0258)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0258.webp", category: "jaleco", badge: "" },
-        { id: "J0263", name: "Jaleco Lise com cinto (0263)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0263.webp", category: "jaleco", badge: "" },
-        { id: "J0265", name: "Jaleco Lise com cinto (0265)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0265.webp", category: "jaleco", badge: "" },
-        { id: "J0266", name: "Jaleco Lise com cinto (0266)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0266.webp", category: "jaleco", badge: "" },
-        { id: "J0272", name: "Jaleco Lise com cinto (0272)", price: 520.00, originalPrice: 650.00, pixPrice: 494.00, img: "images/IMG_0272.webp", category: "jaleco", badge: "" },
-
-        // SCRUBS (36 items)
-        { id: "S0288", name: "Scrub John (0288)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0288.webp", category: "scrub", badge: "" },
-        { id: "S0297", name: "Scrub John (0297)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0297.webp", category: "scrub", badge: "" },
-        { id: "S0299", name: "Scrub John (0299)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0299.webp", category: "scrub", badge: "" },
-        { id: "S0303", name: "Scrub John (0303)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0303.webp", category: "scrub", badge: "" },
-        { id: "S0305", name: "Scrub John (0305)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0305.webp", category: "scrub", badge: "" },
-        { id: "S0309", name: "Scrub John (0309)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0309.webp", category: "scrub", badge: "" },
-        { id: "S0311", name: "Scrub John (0311)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0311.webp", category: "scrub", badge: "" },
-        { id: "S0316", name: "Scrub John (0316)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0316.webp", category: "scrub", badge: "" },
-        { id: "S0321", name: "Scrub Annie (0321)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0321.webp", category: "scrub", badge: "" },
-        { id: "S0326", name: "Scrub Annie (0326)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0326.webp", category: "scrub", badge: "" },
-        { id: "S0331", name: "Scrub Annie (0331)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0331.webp", category: "scrub", badge: "" },
-        { id: "S0335", name: "Scrub Coats (0335)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0335.webp", category: "scrub", badge: "" },
-        { id: "S0341", name: "Scrub Calça Annie (0341)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0341.webp", category: "scrub", badge: "" },
-        { id: "S0343", name: "Scrub Calça Annie (0343)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0343.webp", category: "scrub", badge: "" },
-        { id: "S0345", name: "Scrub Annie (0345)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0345.webp", category: "scrub", badge: "" },
-        { id: "S0349", name: "Scrub Annie (0349)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0349.webp", category: "scrub", badge: "" },
-        { id: "S0353", name: "Scrub Annie (0353)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0353.webp", category: "scrub", badge: "" },
-        { id: "S0361", name: "Scrub Annie (0361)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0361.webp", category: "scrub", badge: "" },
-        { id: "S0363", name: "Scrub Annie (0363)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0363.webp", category: "scrub", badge: "" },
-        { id: "S0366", name: "Scrub James (0366)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0366.webp", category: "scrub", badge: "" },
-        { id: "S0367", name: "Scrub James (0367)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0367.webp", category: "scrub", badge: "" },
-        { id: "S0372", name: "Scrub James (0372)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0372.webp", category: "scrub", badge: "" },
-        { id: "S0375", name: "Scrub James (0375)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0375.webp", category: "scrub", badge: "" },
-        { id: "S0376", name: "Scrub James (0376)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0376.webp", category: "scrub", badge: "" },
-        { id: "S0381", name: "Scrub James (0381)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0381.webp", category: "scrub", badge: "" },
-        { id: "S0396", name: "Scrub Marie (0396)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0396.webp", category: "scrub", badge: "" },
-        { id: "S0408", name: "Scrub Marie (0408)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0408.webp", category: "scrub", badge: "" },
-        { id: "S0411", name: "Scrub Marie (0411)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0411.webp", category: "scrub", badge: "" },
-        { id: "S0413", name: "Scrub Marie (0413)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0413.webp", category: "scrub", badge: "" },
-        { id: "S0425", name: "Scrub Coats (0425)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0425.webp", category: "scrub", badge: "" },
-        { id: "S0426", name: "Scrub Coats (0426)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0426.webp", category: "scrub", badge: "" },
-        { id: "S0435", name: "Scrub Coats (0435)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0435.webp", category: "scrub", badge: "" },
-        { id: "S0445", name: "Scrub Coats (0445)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0445.webp", category: "scrub", badge: "" },
-        { id: "S0459", name: "Scrub Coats (0459)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0459.webp", category: "scrub", badge: "" },
-        { id: "S0463", name: "Scrub Coats (0463)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0463.webp", category: "scrub", badge: "" },
-        { id: "S0505", name: "Scrub Coats (0505)", price: 320.00, originalPrice: 390.00, pixPrice: 304.00, img: "images/IMG_0505.webp", category: "scrub", badge: "" }
+        {
+            id: "J_ELIZA",
+            name: "Jaleco Eliza",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "-20%",
+            description: "O Jaleco Eliza é a expressão máxima da alfaiataria médica feminina. Com gola estruturada, botões refinados e tecido de alta densidade com elastano que garante flexibilidade e caimento impecável.",
+            images: [
+                "images/IMG_0016.webp",
+                "images/IMG_0018.webp",
+                "images/IMG_0022.webp",
+                "images/IMG_0041.webp",
+                "images/IMG_0229.webp",
+                "images/IMG_0230.webp",
+                "images/IMG_0233.webp"
+            ]
+        },
+        {
+            id: "J_JOAO",
+            name: "Jaleco João",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "Masculino",
+            description: "Corte macio e contemporâneo para profissionais exigentes. O Jaleco João alia presença marcante com tecido bi-stretch respirável e bolsos utilitários internos.",
+            images: [
+                "images/IMG_0024.webp",
+                "images/IMG_0027.webp"
+            ]
+        },
+        {
+            id: "J_RUBENS",
+            name: "Jaleco Rubens",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "Lançamento",
+            description: "Design minimalista e sofisticado. O modelo Rubens destaca-se pelo colarinho de alfaiate, botoeiros embutidos e acabamento acetinado de extrema elegância.",
+            images: [
+                "images/IMG_0038.webp",
+                "images/IMG_0059.webp",
+                "images/IMG_0061.webp",
+                "images/IMG_0065.webp"
+            ]
+        },
+        {
+            id: "J_ANDRE",
+            name: "Jaleco André",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "",
+            description: "Sofisticação e atemporalidade para o dia a dia. O Jaleco André possui lapelas impecáveis e caimento ajustado ao corpo sem limitar seus movimentos.",
+            images: [
+                "images/IMG_0057.webp",
+                "images/IMG_0067.webp",
+                "images/IMG_0069.webp",
+                "images/IMG_0072.webp",
+                "images/IMG_0211.webp"
+            ]
+        },
+        {
+            id: "J_RUBENS_ANDRE",
+            name: "Jaleco Rubens & André",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "Duo Luxe",
+            description: "Coleção especial integrando as melhores linhas de alfaiataria masculina com botões duplos e forro acetinado de alta respirabilidade.",
+            images: [
+                "images/IMG_0046.webp",
+                "images/IMG_0052.webp"
+            ]
+        },
+        {
+            id: "J_ALICE",
+            name: "Jaleco Alice",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "Mais Vendido",
+            description: "Um clássico da alta costura médica. Detalhes em pregas sutis, cintura desenhada e punhos italianos com botões refinados.",
+            images: [
+                "images/IMG_0086.webp",
+                "images/IMG_0089.webp",
+                "images/IMG_0093.webp",
+                "images/IMG_0108.webp"
+            ]
+        },
+        {
+            id: "J_KATHERINE",
+            name: "Jaleco Katherine",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "-20%",
+            description: "O modelo Katherine é referência em delicadeza e luxo. Possui gola V aplicada com caimento impecável, ideal para médicas e especialistas em estética.",
+            images: [
+                "images/IMG_0107.webp",
+                "images/IMG_0110.webp",
+                "images/IMG_0116.webp",
+                "images/IMG_0185.webp",
+                "images/IMG_0190.webp",
+                "images/IMG_0200.webp"
+            ]
+        },
+        {
+            id: "J_LISE",
+            name: "Jaleco Lise",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "Cinto Ajustável",
+            description: "Modelagem multifuncional com cinto removível de alta costura, permitindo uso acinturado ou fluido. Tecido com elastano de secagem rápida.",
+            images: [
+                "images/IMG_0118.webp",
+                "images/IMG_0123.webp",
+                "images/IMG_0132.webp",
+                "images/IMG_0133.webp",
+                "images/IMG_0166.webp",
+                "images/IMG_0169.webp",
+                "images/IMG_0171.webp",
+                "images/IMG_0173.webp",
+                "images/IMG_0244.webp",
+                "images/IMG_0251.webp",
+                "images/IMG_0258.webp",
+                "images/IMG_0263.webp",
+                "images/IMG_0265.webp",
+                "images/IMG_0266.webp",
+                "images/IMG_0272.webp"
+            ]
+        },
+        {
+            id: "J_BELL",
+            name: "Jaleco Bell",
+            price: 520.00,
+            originalPrice: 650.00,
+            pixPrice: 494.00,
+            category: "jaleco",
+            badge: "",
+            description: "Linhas limpas e caimento estruturado. O Jaleco Bell transmite autoridade e leveza com gola notched e bolsos invisíveis laterais.",
+            images: [
+                "images/IMG_0139.webp",
+                "images/IMG_0144.webp",
+                "images/IMG_0146.webp",
+                "images/IMG_0147.webp"
+            ]
+        },
+        {
+            id: "J_COATS",
+            name: "Jaleco COATS Edição Ouro",
+            price: 560.00,
+            originalPrice: 700.00,
+            pixPrice: 532.00,
+            category: "jaleco",
+            badge: "Edição Ouro",
+            description: "A peça emblemática que carrega a assinatura COATS. Botões folheados a ouro, tecido gabardine nobre e acabamento feito à mão.",
+            images: [
+                "images/IMG_0079.webp",
+                "images/IMG_0213.webp",
+                "images/IMG_0221.webp"
+            ]
+        },
+        {
+            id: "S_JOHN",
+            name: "Scrub John",
+            price: 320.00,
+            originalPrice: 390.00,
+            pixPrice: 304.00,
+            category: "scrub",
+            badge: "Tecnológico",
+            description: "Conjunto Scrub masculino com modelagem esportiva de luxo. Tecido ultra-respirável com ação antibacteriana e secagem rápida.",
+            images: [
+                "images/IMG_0288.webp",
+                "images/IMG_0297.webp",
+                "images/IMG_0299.webp",
+                "images/IMG_0303.webp",
+                "images/IMG_0305.webp",
+                "images/IMG_0309.webp",
+                "images/IMG_0311.webp",
+                "images/IMG_0316.webp"
+            ]
+        },
+        {
+            id: "S_ANNIE",
+            name: "Scrub Annie",
+            price: 320.00,
+            originalPrice: 390.00,
+            pixPrice: 304.00,
+            category: "scrub",
+            badge: "Mais Vendido",
+            description: "O Scrub feminino dos sonhos. Decote V suave, calça jogger funcional com bolsos estratégicos e elástico de alto conforto na cintura.",
+            images: [
+                "images/IMG_0321.webp",
+                "images/IMG_0326.webp",
+                "images/IMG_0331.webp",
+                "images/IMG_0341.webp",
+                "images/IMG_0343.webp",
+                "images/IMG_0345.webp",
+                "images/IMG_0349.webp",
+                "images/IMG_0353.webp",
+                "images/IMG_0361.webp",
+                "images/IMG_0363.webp"
+            ]
+        },
+        {
+            id: "S_JAMES",
+            name: "Scrub James",
+            price: 320.00,
+            originalPrice: 390.00,
+            pixPrice: 304.00,
+            category: "scrub",
+            badge: "",
+            description: "Ergonomia avançada para cirurgiões e médicos atuantes. Tecido quadri-stretch com máxima flexibilidade e acabamento anti-pilling.",
+            images: [
+                "images/IMG_0366.webp",
+                "images/IMG_0367.webp",
+                "images/IMG_0372.webp",
+                "images/IMG_0375.webp",
+                "images/IMG_0376.webp",
+                "images/IMG_0381.webp"
+            ]
+        },
+        {
+            id: "S_MARIE",
+            name: "Scrub Marie",
+            price: 320.00,
+            originalPrice: 390.00,
+            pixPrice: 304.00,
+            category: "scrub",
+            badge: "Novidade",
+            description: "Elegância minimalista em formato Scrub. Corte acinturado com mangas curtas de caimento fluido e toque incrivelmente macio.",
+            images: [
+                "images/IMG_0396.webp",
+                "images/IMG_0408.webp",
+                "images/IMG_0411.webp",
+                "images/IMG_0413.webp"
+            ]
+        },
+        {
+            id: "S_COATS",
+            name: "Scrub COATS High-Tech",
+            price: 340.00,
+            originalPrice: 420.00,
+            pixPrice: 323.00,
+            category: "scrub",
+            badge: "Premium",
+            description: "Engenharia têxtil de ponta em scrubs hospitalares. Repelente a líquidos, proteção solar UPF50+ e durabilidade extrema.",
+            images: [
+                "images/IMG_0335.webp",
+                "images/IMG_0425.webp",
+                "images/IMG_0426.webp",
+                "images/IMG_0435.webp",
+                "images/IMG_0445.webp",
+                "images/IMG_0459.webp",
+                "images/IMG_0463.webp",
+                "images/IMG_0505.webp"
+            ]
+        }
     ];
 
     let currentTab = 'all';
     let visibleItemsCount = 12;
     let searchQuery = '';
+    let selectedSizeModal = 'M';
 
     const catalogGrid = document.getElementById('catalog-grid');
     const loadMoreBtn = document.getElementById('load-more-btn');
@@ -302,17 +480,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         catalogGrid.innerHTML = visibleItems.map(item => {
             const badgeHtml = item.badge ? `<span class="badge ${item.badge.startsWith('-') ? 'badge-sale' : 'badge-new'}">${item.badge}</span>` : '';
+            const secondImg = item.images[1] || item.images[0];
             return `
-                <div class="product-card" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}" data-img="${item.img}">
+                <div class="product-card" data-id="${item.id}">
                     <div class="product-image-container">
-                        <img src="${item.img}" alt="${item.name}" class="product-img" loading="lazy">
+                        <img src="${item.images[0]}" alt="${item.name}" class="product-img" loading="lazy" data-hover="${secondImg}" data-main="${item.images[0]}">
                         ${badgeHtml}
-                        <button class="quick-add-btn" aria-label="Adicionar ao Carrinho">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
+                        <button class="quick-view-btn">VER GALERIA / ZOOM</button>
                     </div>
                     <div class="product-details">
                         <h3 class="product-title">${item.name}</h3>
@@ -326,6 +500,28 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }).join('');
 
+        // Attach Card Hover Photo Swap Listener
+        catalogGrid.querySelectorAll('.product-card').forEach(card => {
+            const img = card.querySelector('.product-img');
+            if (img && img.dataset.hover) {
+                card.addEventListener('mouseenter', () => {
+                    img.src = img.dataset.hover;
+                });
+                card.addEventListener('mouseleave', () => {
+                    img.src = img.dataset.main;
+                });
+            }
+            
+            // Open Modal on click anywhere on card
+            card.addEventListener('click', (e) => {
+                const prodId = card.dataset.id;
+                const prod = products.find(p => p.id === prodId);
+                if (prod) {
+                    openProductModal(prod);
+                }
+            });
+        });
+
         if (loadMoreContainer) {
             if (filtered.length > visibleItemsCount) {
                 loadMoreContainer.style.display = 'flex';
@@ -334,6 +530,98 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
+
+    // ==========================================================================
+    // PRODUCT QUICK VIEW / LIGHTBOX MODAL LOGIC
+    // ==========================================================================
+    const productModal = document.getElementById('product-modal');
+    
+    const openProductModal = (product) => {
+        if (!productModal) return;
+
+        document.getElementById('modal-title').textContent = product.name;
+        document.getElementById('modal-category').textContent = product.category === 'jaleco' ? 'Jaleco de Luxo' : 'Scrub Tecnológico';
+        document.getElementById('modal-price').textContent = `R$ ${product.price.toFixed(2).replace('.', ',')}`;
+        document.getElementById('modal-original-price').textContent = `R$ ${product.originalPrice.toFixed(2).replace('.', ',')}`;
+        document.getElementById('modal-pix').textContent = `R$ ${product.pixPrice.toFixed(2).replace('.', ',')} no PIX (5% OFF)`;
+        document.getElementById('modal-desc').textContent = product.description;
+
+        const mainImg = document.getElementById('modal-main-img');
+        mainImg.src = product.images[0];
+
+        // Render gallery thumbnails
+        const thumbsBar = document.getElementById('modal-thumbnails');
+        thumbsBar.innerHTML = product.images.map((img, idx) => `
+            <img src="${img}" alt="${product.name} - Foto ${idx+1}" class="modal-thumb ${idx === 0 ? 'active' : ''}" data-src="${img}">
+        `).join('');
+
+        thumbsBar.querySelectorAll('.modal-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                thumbsBar.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+                mainImg.src = thumb.dataset.src;
+            });
+        });
+
+        // WhatsApp direct link generator
+        const updateWaLink = () => {
+            const waBtn = document.getElementById('modal-whatsapp-btn');
+            if (waBtn) {
+                const message = encodeURIComponent(`Olá COATS! Gostaria de encomendar o ${product.name} (Tamanho: ${selectedSizeModal}). Poderia me passar mais informações?`);
+                waBtn.href = `https://wa.me/5575981256201?text=${message}`;
+            }
+        };
+        updateWaLink();
+
+        // Size selector interaction
+        const sizeBtns = productModal.querySelectorAll('.size-btn');
+        sizeBtns.forEach(btn => {
+            btn.onclick = () => {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedSizeModal = btn.dataset.size;
+                updateWaLink();
+            };
+        });
+
+        // Add to cart from modal
+        const addCartBtn = document.getElementById('modal-add-cart-btn');
+        addCartBtn.onclick = () => {
+            const cartId = `${product.id}_${selectedSizeModal}`;
+            const existing = cart.find(i => i.id === cartId);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({
+                    id: cartId,
+                    name: `${product.name} (${selectedSizeModal})`,
+                    price: product.price,
+                    img: product.images[0],
+                    quantity: 1
+                });
+            }
+            updateCartUI();
+            showToast(`${product.name} (${selectedSizeModal}) adicionado à sacola!`);
+            closeModal();
+        };
+
+        productModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        if (productModal) {
+            productModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (productModal) {
+        productModal.querySelector('.close-modal-btn').addEventListener('click', closeModal);
+        productModal.addEventListener('click', (e) => {
+            if (e.target === productModal) closeModal();
+        });
+    }
 
     // Event Delegation for Adding to Cart
     document.body.addEventListener('click', (e) => {
@@ -469,6 +757,25 @@ document.addEventListener('DOMContentLoaded', () => {
             newsletterForm.style.display = 'none';
             newsletterSuccess.style.display = 'block';
             showToast('E-mail cadastrado com sucesso!');
+        });
+    }
+
+    // ==========================================================================
+    // EMBROIDERY VIDEO SELECTOR TABS
+    // ==========================================================================
+    const videoSelectBtns = document.querySelectorAll('.video-select-btn');
+    const embroideryVideo = document.querySelector('.embroidery-video');
+    if (videoSelectBtns.length > 0 && embroideryVideo) {
+        videoSelectBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                videoSelectBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const src = btn.getAttribute('data-src');
+                if (src) {
+                    embroideryVideo.src = src;
+                    embroideryVideo.play();
+                }
+            });
         });
     }
 });

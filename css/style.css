@@ -960,33 +960,80 @@ section {
 
 .embroidery-video-card {
     position: relative;
-    margin-bottom: 30px;
-    border-radius: 4px;
+    margin: 25px 0 15px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 12px 30px rgba(28,26,25,0.08);
-    border: 1px solid var(--color-border);
-    height: 220px;
+    box-shadow: 0 16px 40px rgba(28,26,25,0.15);
+    border: 1px solid var(--color-gold);
+    height: 480px;
+    background-color: #1C1A19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .embroidery-video-card video,
 .embroidery-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #1C1A19;
 }
 
 .embroidery-video-overlay {
     position: absolute;
-    bottom: 12px;
-    left: 12px;
-    background: rgba(28, 26, 25, 0.75);
-    backdrop-filter: blur(8px);
-    color: #fff;
-    padding: 6px 14px;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(28, 26, 25, 0.85);
+    backdrop-filter: blur(10px);
+    color: var(--color-gold);
+    padding: 8px 16px;
     font-size: 0.8rem;
     letter-spacing: 0.05em;
+    border-radius: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    pointer-events: none;
+}
+
+.badge-hd {
+    background: var(--color-gold);
+    color: var(--color-primary);
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
     border-radius: 2px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    text-transform: uppercase;
+}
+
+.embroidery-video-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.video-select-btn {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    padding: 8px 14px;
+    font-size: 0.76rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.video-select-btn.active,
+.video-select-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-gold);
+    border-color: var(--color-gold);
 }
 
 .embroidery-title {
@@ -1886,5 +1933,297 @@ section {
     
     .testimonial-quote {
         font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   PRODUCT QUICK VIEW & ZOOM LIGHTBOX MODAL
+   ========================================================================== */
+.gallery-count-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(28, 26, 25, 0.8);
+    backdrop-filter: blur(6px);
+    color: var(--color-gold);
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 2px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.quick-view-btn {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    background: var(--color-primary);
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.product-card:hover .quick-view-btn {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(18, 16, 15, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    padding: 20px;
+}
+
+.product-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content-wrapper {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    max-width: 960px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    padding: 40px;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.close-modal-btn:hover {
+    color: var(--color-gold);
+    transform: scale(1.1);
+}
+
+.modal-body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.modal-main-image-container {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    cursor: zoom-in;
+    border-radius: 4px;
+}
+
+.modal-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.modal-main-image-container:hover .modal-main-img {
+    transform: scale(1.35);
+}
+
+.modal-zoom-hint {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(28,26,25,0.75);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.modal-thumbnails-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.modal-thumb {
+    width: 70px;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+    opacity: 0.7;
+}
+
+.modal-thumb.active,
+.modal-thumb:hover {
+    border-color: var(--color-gold);
+    opacity: 1;
+}
+
+.modal-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.modal-title {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin: 8px 0 16px;
+    font-weight: 400;
+}
+
+.modal-price-box {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.modal-price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-right: 12px;
+}
+
+.modal-original-price {
+    text-decoration: line-through;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+}
+
+.modal-pix-badge {
+    margin-top: 8px;
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--color-primary);
+    border: 1px solid var(--color-gold);
+    padding: 4px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.modal-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.modal-size-selector {
+    margin-bottom: 30px;
+}
+
+.size-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.size-options {
+    display: flex;
+    gap: 8px;
+}
+
+.size-btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.size-btn.active,
+.size-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.modal-cart-btn {
+    padding: 14px;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .modal-body-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .modal-main-image-container {
+        height: 340px;
+    }
+    .modal-content-wrapper {
+        padding: 24px;
     }
 }
