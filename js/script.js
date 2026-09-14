@@ -183,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "feminino",
             badge: "-20%",
             description: "O Jaleco Eliza é a expressão máxima da alfaiataria médica feminina. Com gola estruturada, botões refinados e tecido de alta densidade com elastano que garante flexibilidade e caimento impecável.",
             images: [
@@ -193,6 +194,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/IMG_0229.webp",
                 "images/IMG_0230.webp",
                 "images/IMG_0233.webp"
+            ],
+            colors: [
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: ["images/IMG_0016.webp", "images/IMG_0018.webp", "images/IMG_0022.webp", "images/IMG_0041.webp"]
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19",
+                    images: ["images/IMG_0229.webp", "images/IMG_0230.webp", "images/IMG_0233.webp"]
+                }
             ]
         },
         {
@@ -202,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "masculino",
             badge: "Masculino",
             description: "Corte macio e contemporâneo para profissionais exigentes. O Jaleco João alia presença marcante com tecido bi-stretch respirável e bolsos utilitários internos.",
             images: [
@@ -216,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "masculino",
             badge: "Lançamento",
             description: "Design minimalista e sofisticado. O modelo Rubens destaca-se pelo colarinho de alfaiate, botoeiros embutidos e acabamento acetinado de extrema elegância.",
             images: [
@@ -232,6 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "masculino",
             badge: "",
             description: "Sofisticação e atemporalidade para o dia a dia. O Jaleco André possui lapelas impecáveis e caimento ajustado ao corpo sem limitar seus movimentos.",
             images: [
@@ -249,8 +265,9 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "masculino",
             badge: "Duo Luxe",
-            description: "Coleção especial integrando as melhores linhas de alfaiataria masculina com botões duplos e forro acetinado de alta respirabilidade.",
+            description: "Coleção especial integrando as melhores linhas de alfaiataria masculina com botões duplos e forro acetinado de alta respirabilidade. Todas as peças são vendidas individualmente.",
             images: [
                 "images/IMG_0046.webp",
                 "images/IMG_0052.webp"
@@ -263,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "feminino",
             badge: "Mais Vendido",
             description: "Um clássico da alta costura médica. Detalhes em pregas sutis, cintura desenhada e punhos italianos com botões refinados.",
             images: [
@@ -279,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "feminino",
             badge: "-20%",
             description: "O modelo Katherine é referência em delicadeza e luxo. Possui gola V aplicada com caimento impecável, ideal para médicas e especialistas em estética.",
             images: [
@@ -297,6 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "feminino",
             badge: "Cinto Ajustável",
             description: "Modelagem multifuncional com cinto removível de alta costura, permitindo uso acinturado ou fluido. Tecido com elastano de secagem rápida.",
             images: [
@@ -324,6 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 650.00,
             pixPrice: 494.00,
             category: "jaleco",
+            gender: "feminino",
             badge: "",
             description: "Linhas limpas e caimento estruturado. O Jaleco Bell transmite autoridade e leveza com gola notched e bolsos invisíveis laterais.",
             images: [
@@ -340,6 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 700.00,
             pixPrice: 532.00,
             category: "jaleco",
+            gender: "unissex",
             badge: "Edição Ouro",
             description: "A peça emblemática que carrega a assinatura COATS. Botões folheados a ouro, tecido gabardine nobre e acabamento feito à mão.",
             images: [
@@ -355,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 390.00,
             pixPrice: 304.00,
             category: "scrub",
+            gender: "masculino",
             badge: "Tecnológico",
             description: "Conjunto Scrub masculino com modelagem esportiva de luxo. Tecido ultra-respirável com ação antibacteriana e secagem rápida.",
             images: [
@@ -366,6 +389,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/IMG_0309.webp",
                 "images/IMG_0311.webp",
                 "images/IMG_0316.webp"
+            ],
+            colors: [
+                {
+                    name: "Marinho",
+                    hex: "#1c2b4a",
+                    images: ["images/IMG_0288.webp", "images/IMG_0303.webp", "images/IMG_0305.webp", "images/IMG_0309.webp", "images/IMG_0311.webp"]
+                },
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: ["images/IMG_0297.webp", "images/IMG_0299.webp", "images/IMG_0316.webp"]
+                }
             ]
         },
         {
@@ -375,6 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 390.00,
             pixPrice: 304.00,
             category: "scrub",
+            gender: "feminino",
             badge: "Mais Vendido",
             description: "O Scrub feminino dos sonhos. Decote V suave, calça jogger funcional com bolsos estratégicos e elástico de alto conforto na cintura.",
             images: [
@@ -388,6 +424,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/IMG_0353.webp",
                 "images/IMG_0361.webp",
                 "images/IMG_0363.webp"
+            ],
+            colors: [
+                {
+                    name: "Marinho",
+                    hex: "#1c2b4a",
+                    images: ["images/IMG_0321.webp", "images/IMG_0326.webp", "images/IMG_0331.webp", "images/IMG_0341.webp", "images/IMG_0343.webp"]
+                },
+                {
+                    name: "Vermelho",
+                    hex: "#b5241e",
+                    images: ["images/IMG_0345.webp", "images/IMG_0349.webp"]
+                },
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: ["images/IMG_0353.webp", "images/IMG_0361.webp", "images/IMG_0363.webp"]
+                }
             ]
         },
         {
@@ -397,6 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 390.00,
             pixPrice: 304.00,
             category: "scrub",
+            gender: "masculino",
             badge: "",
             description: "Ergonomia avançada para cirurgiões e médicos atuantes. Tecido quadri-stretch com máxima flexibilidade e acabamento anti-pilling.",
             images: [
@@ -406,6 +460,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/IMG_0375.webp",
                 "images/IMG_0376.webp",
                 "images/IMG_0381.webp"
+            ],
+            colors: [
+                {
+                    name: "Azul",
+                    hex: "#1f7fd1",
+                    images: ["images/IMG_0366.webp", "images/IMG_0367.webp", "images/IMG_0372.webp"]
+                },
+                {
+                    name: "Vermelho",
+                    hex: "#b5241e",
+                    images: ["images/IMG_0375.webp", "images/IMG_0376.webp", "images/IMG_0381.webp"]
+                }
             ]
         },
         {
@@ -415,6 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 390.00,
             pixPrice: 304.00,
             category: "scrub",
+            gender: "feminino",
             badge: "Novidade",
             description: "Elegância minimalista em formato Scrub. Corte acinturado com mangas curtas de caimento fluido e toque incrivelmente macio.",
             images: [
@@ -431,6 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
             originalPrice: 420.00,
             pixPrice: 323.00,
             category: "scrub",
+            gender: "feminino",
             badge: "Premium",
             description: "Engenharia têxtil de ponta em scrubs hospitalares. Repelente a líquidos, proteção solar UPF50+ e durabilidade extrema.",
             images: [
@@ -459,7 +527,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!catalogGrid) return;
 
         let filtered = products.filter(product => {
-            const matchesTab = currentTab === 'all' || product.category === currentTab;
+            const productTab = `${product.category}-${product.gender}`;
+            const matchesTab = currentTab === 'all' ||
+                productTab === currentTab ||
+                (product.gender === 'unissex' && currentTab.startsWith(`${product.category}-`));
             const matchesSearch = searchQuery === '' || 
                 product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                 product.id.toLowerCase().includes(searchQuery.toLowerCase());
@@ -540,34 +611,73 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!productModal) return;
 
         document.getElementById('modal-title').textContent = product.name;
-        document.getElementById('modal-category').textContent = product.category === 'jaleco' ? 'Jaleco de Luxo' : 'Scrub Tecnológico';
+        const categoryLabel = product.category === 'jaleco' ? 'Jaleco de Luxo' : 'Scrub Tecnológico';
+        const genderLabel = product.gender === 'feminino' ? 'Feminino' : product.gender === 'masculino' ? 'Masculino' : 'Unissex';
+        document.getElementById('modal-category').textContent = `${categoryLabel} ${genderLabel}`;
         document.getElementById('modal-price').textContent = `R$ ${product.price.toFixed(2).replace('.', ',')}`;
         document.getElementById('modal-original-price').textContent = `R$ ${product.originalPrice.toFixed(2).replace('.', ',')}`;
         document.getElementById('modal-pix').textContent = `R$ ${product.pixPrice.toFixed(2).replace('.', ',')} no PIX (5% OFF)`;
         document.getElementById('modal-desc').textContent = product.description;
 
         const mainImg = document.getElementById('modal-main-img');
-        mainImg.src = product.images[0];
-
-        // Render gallery thumbnails
         const thumbsBar = document.getElementById('modal-thumbnails');
-        thumbsBar.innerHTML = product.images.map((img, idx) => `
-            <img src="${img}" alt="${product.name} - Foto ${idx+1}" class="modal-thumb ${idx === 0 ? 'active' : ''}" data-src="${img}">
-        `).join('');
 
-        thumbsBar.querySelectorAll('.modal-thumb').forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                thumbsBar.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
-                mainImg.src = thumb.dataset.src;
+        // Render gallery thumbnails for a given set of images (a color's photos, or the full gallery)
+        const renderGallery = (imgs) => {
+            mainImg.src = imgs[0];
+            thumbsBar.innerHTML = imgs.map((img, idx) => `
+                <img src="${img}" alt="${product.name} - Foto ${idx+1}" class="modal-thumb ${idx === 0 ? 'active' : ''}" data-src="${img}">
+            `).join('');
+
+            thumbsBar.querySelectorAll('.modal-thumb').forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    thumbsBar.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                    mainImg.src = thumb.dataset.src;
+                });
             });
-        });
+        };
+
+        // Color selector interaction (only for products with color variants)
+        const colorSelector = document.getElementById('modal-color-selector');
+        const colorOptions = document.getElementById('modal-color-options');
+        const colorNameLabel = document.getElementById('modal-color-name');
+        let selectedColorModal = null;
+
+        if (product.colors && product.colors.length) {
+            colorSelector.style.display = 'block';
+            selectedColorModal = product.colors[0].name;
+            colorNameLabel.textContent = selectedColorModal;
+
+            colorOptions.innerHTML = product.colors.map((c, idx) => `
+                <button class="color-swatch ${idx === 0 ? 'active' : ''}" data-color="${c.name}" style="background-color: ${c.hex};" title="${c.name}" aria-label="${c.name}"></button>
+            `).join('');
+
+            colorOptions.querySelectorAll('.color-swatch').forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    colorOptions.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+                    swatch.classList.add('active');
+                    selectedColorModal = swatch.dataset.color;
+                    colorNameLabel.textContent = selectedColorModal;
+                    const chosen = product.colors.find(c => c.name === selectedColorModal);
+                    renderGallery(chosen.images);
+                    updateWaLink();
+                });
+            });
+
+            renderGallery(product.colors[0].images);
+        } else {
+            colorSelector.style.display = 'none';
+            colorOptions.innerHTML = '';
+            renderGallery(product.images);
+        }
 
         // WhatsApp direct link generator
         const updateWaLink = () => {
             const waBtn = document.getElementById('modal-whatsapp-btn');
             if (waBtn) {
-                const message = encodeURIComponent(`Olá COATS! Gostaria de encomendar o ${product.name} (Tamanho: ${selectedSizeModal}). Poderia me passar mais informações?`);
+                const colorInfo = selectedColorModal ? `, Cor: ${selectedColorModal}` : '';
+                const message = encodeURIComponent(`Olá COATS! Gostaria de encomendar o ${product.name} (Tamanho: ${selectedSizeModal}${colorInfo}). Poderia me passar mais informações?`);
                 waBtn.href = `https://wa.me/5575981256201?text=${message}`;
             }
         };
@@ -587,21 +697,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add to cart from modal
         const addCartBtn = document.getElementById('modal-add-cart-btn');
         addCartBtn.onclick = () => {
-            const cartId = `${product.id}_${selectedSizeModal}`;
+            const cartId = selectedColorModal ? `${product.id}_${selectedSizeModal}_${selectedColorModal}` : `${product.id}_${selectedSizeModal}`;
+            const variantLabel = selectedColorModal ? `${selectedSizeModal}, ${selectedColorModal}` : selectedSizeModal;
+            const cartImg = selectedColorModal ? product.colors.find(c => c.name === selectedColorModal).images[0] : product.images[0];
             const existing = cart.find(i => i.id === cartId);
             if (existing) {
                 existing.quantity += 1;
             } else {
                 cart.push({
                     id: cartId,
-                    name: `${product.name} (${selectedSizeModal})`,
+                    name: `${product.name} (${variantLabel})`,
                     price: product.price,
-                    img: product.images[0],
+                    img: cartImg,
                     quantity: 1
                 });
             }
             updateCartUI();
-            showToast(`${product.name} (${selectedSizeModal}) adicionado à sacola!`);
+            showToast(`${product.name} (${variantLabel}) adicionado à sacola!`);
             closeModal();
         };
 
