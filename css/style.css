@@ -2287,3 +2287,14 @@ section {
         padding: 24px;
     }
 }
+
+/* ==========================================================================
+   PREÇOS OCULTOS (remova este bloco para voltar a exibir os valores)
+   ========================================================================== */
+.product-pricing,
+.pix-price,
+.modal-price-box,
+.cart-item-price,
+.cart-subtotal {
+    display: none !important;
+}
