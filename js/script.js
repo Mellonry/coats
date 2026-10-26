@@ -1085,23 +1085,4 @@ document.addEventListener('DOMContentLoaded', () => {
         img.addEventListener('error', () => img.classList.add('missing'));
         if (img.complete && img.naturalWidth === 0) img.classList.add('missing');
     });
-
-    // ==========================================================================
-    // EMBROIDERY VIDEO SELECTOR TABS
-    // ==========================================================================
-    const videoSelectBtns = document.querySelectorAll('.video-select-btn');
-    const embroideryVideo = document.querySelector('.embroidery-video');
-    if (videoSelectBtns.length > 0 && embroideryVideo) {
-        videoSelectBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                videoSelectBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const src = btn.getAttribute('data-src');
-                if (src) {
-                    embroideryVideo.src = src;
-                    embroideryVideo.play();
-                }
-            });
-        });
-    }
 });
