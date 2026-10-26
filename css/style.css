@@ -2394,6 +2394,172 @@ section {
     text-transform: uppercase;
 }
 
+/* Embroidery order form (product modal) */
+.emb-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+}
+
+.emb-form .size-label {
+    margin-bottom: 0;
+}
+
+.emb-form .size-label small {
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--color-text-muted);
+}
+
+.emb-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.emb-toggle:has(input:checked) {
+    border-color: var(--color-gold);
+}
+
+.emb-toggle input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+}
+
+.emb-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 4px 0 6px 16px;
+    border-left: 2px solid var(--color-gold);
+}
+
+.emb-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.emb-field em {
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+.emb-field input,
+.emb-field select,
+.emb-field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-white);
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 4px;
+}
+
+.emb-field textarea {
+    resize: vertical;
+}
+
+.emb-field input:focus,
+.emb-field select:focus,
+.emb-field textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+}
+
+.emb-font-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.emb-font-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 10px 6px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-white);
+    cursor: pointer;
+    text-align: center;
+}
+
+.emb-font-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.emb-font-option:has(input:checked) {
+    border-color: var(--color-primary);
+    box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+
+.emb-font-option:has(input:focus-visible) {
+    outline: 2px solid var(--color-gold);
+}
+
+.emb-font-preview {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    line-height: 1.3;
+}
+
+.emb-font-preview.font-great-vibes { font-size: 1.6rem; }
+.emb-font-preview.font-montserrat { font-size: 0.85rem; }
+
+.emb-font-name {
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+}
+
+.emb-crest-sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.emb-hint {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.emb-error {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+@media (max-width: 576px) {
+    .emb-crest-sides {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .modal-body-grid {
         grid-template-columns: 1fr;

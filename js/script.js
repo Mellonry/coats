@@ -841,7 +841,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         const thumb = thumbsBar.querySelector(`.modal-thumb[data-src="${chosen.images[0]}"]`);
                         if (thumb) thumb.click();
                     }
-                    updateWaLink();
                 });
             });
 
@@ -852,16 +851,83 @@ document.addEventListener('DOMContentLoaded', () => {
             renderGallery(product.images);
         }
 
-        // WhatsApp direct link generator
-        const updateWaLink = () => {
-            const waBtn = document.getElementById('modal-whatsapp-btn');
-            if (waBtn) {
-                const colorInfo = selectedColorModal ? `, Cor: ${selectedColorModal}` : '';
-                const message = encodeURIComponent(`Olá COATS! Gostaria de encomendar o ${product.name} (Tamanho: ${selectedSizeModal}${colorInfo}). Poderia me passar mais informações?`);
-                waBtn.href = `https://wa.me/5575981256201?text=${message}`;
-            }
+        // Embroidery form: reset on every open and show fields as options are checked
+        const embForm = document.getElementById('modal-embroidery-form');
+        const embNameToggle = document.getElementById('emb-name-toggle');
+        const embCrestToggle = document.getElementById('emb-crest-toggle');
+        const embProfession = document.getElementById('emb-profession');
+        const embProfessionOtherField = document.getElementById('emb-profession-other-field');
+        const embThreadError = document.getElementById('emb-thread-error');
+        const embCrestError = document.getElementById('emb-crest-error');
+        const syncEmbForm = () => {
+            document.getElementById('emb-name-fields').hidden = !embNameToggle.checked;
+            document.getElementById('emb-crest-fields').hidden = !embCrestToggle.checked;
+            embProfessionOtherField.hidden = embProfession.value !== '__outra';
         };
-        updateWaLink();
+        embForm.reset();
+        embThreadError.hidden = true;
+        embCrestError.hidden = true;
+        syncEmbForm();
+        embNameToggle.onchange = syncEmbForm;
+        embCrestToggle.onchange = syncEmbForm;
+        embProfession.onchange = syncEmbForm;
+
+        // Builds the WhatsApp order message from model, color, size and embroidery choices
+        const buildWaMessage = () => {
+            const lines = [
+                'Olá COATS! Gostaria de encomendar:',
+                '',
+                `• Modelo: ${product.name}`,
+            ];
+            if (selectedColorModal) lines.push(`• Cor: ${selectedColorModal}`);
+            lines.push(`• Tamanho: ${selectedSizeModal}`);
+
+            if (embNameToggle.checked) {
+                const name = document.getElementById('emb-name').value.trim();
+                const profession = embProfession.value === '__outra'
+                    ? document.getElementById('emb-profession-other').value.trim()
+                    : embProfession.value;
+                const font = embForm.querySelector('input[name="emb-font"]:checked').value;
+                lines.push('', '*Bordado de nome/profissão*');
+                if (name) lines.push(`• Nome: ${name}`);
+                if (profession) lines.push(`• Profissão: ${profession}`);
+                lines.push(`• Fonte: ${font}`);
+                lines.push(`• Cor da linha: ${document.getElementById('emb-thread').value.trim()}`);
+            }
+
+            if (embCrestToggle.checked) {
+                const right = document.getElementById('emb-crest-right').value;
+                const left = document.getElementById('emb-crest-left').value;
+                lines.push('', '*Brasão*');
+                if (right) lines.push(`• Manga direita: ${right}`);
+                if (left) lines.push(`• Manga esquerda: ${left}`);
+                if (right === 'Logotipo próprio' || left === 'Logotipo próprio') {
+                    lines.push('(vou enviar a imagem do logotipo aqui na conversa)');
+                }
+            }
+
+            const notes = document.getElementById('emb-notes').value.trim();
+            if (notes) lines.push('', `*Observações:* ${notes}`);
+            return lines.join('\n');
+        };
+
+        const validateEmbForm = () => {
+            const threadMissing = embNameToggle.checked && !document.getElementById('emb-thread').value.trim();
+            const crestMissing = embCrestToggle.checked &&
+                !document.getElementById('emb-crest-right').value && !document.getElementById('emb-crest-left').value;
+            embThreadError.hidden = !threadMissing;
+            embCrestError.hidden = !crestMissing;
+            if (threadMissing) document.getElementById('emb-thread').focus();
+            return !threadMissing && !crestMissing;
+        };
+
+        const waBtn = document.getElementById('modal-whatsapp-btn');
+        waBtn.href = 'https://wa.me/5575981256201';
+        waBtn.onclick = (e) => {
+            e.preventDefault();
+            if (!validateEmbForm()) return;
+            window.open(`https://wa.me/5575981256201?text=${encodeURIComponent(buildWaMessage())}`, '_blank', 'noopener');
+        };
 
         // Size selector interaction
         const sizeBtns = productModal.querySelectorAll('.size-btn');
@@ -872,7 +938,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 sizeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 selectedSizeModal = btn.dataset.size;
-                updateWaLink();
             };
         });
 

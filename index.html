@@ -630,13 +630,130 @@
                         </div>
                     </div>
 
+                    <!-- Embroidery Order Form (sent to WhatsApp) -->
+                    <form id="modal-embroidery-form" class="emb-form" novalidate>
+                        <span class="size-label">Personalize seu bordado <small>(opcional)</small></span>
+
+                        <label class="emb-toggle">
+                            <input type="checkbox" id="emb-name-toggle">
+                            <span>Bordar nome e/ou profissão</span>
+                        </label>
+                        <div class="emb-fields" id="emb-name-fields" hidden>
+                            <label class="emb-field">
+                                <span>Nome e sobrenome</span>
+                                <input type="text" id="emb-name" placeholder="Ex: Dra. Ana Souza" maxlength="40">
+                            </label>
+                            <label class="emb-field">
+                                <span>Profissão ou cargo</span>
+                                <select id="emb-profession">
+                                <option value="">Sem profissão</option>
+                                <option value="Medicina">Medicina</option>
+                                <option value="Enfermagem">Enfermagem</option>
+                                <option value="Odontologia">Odontologia</option>
+                                <option value="Fisioterapia">Fisioterapia</option>
+                                <option value="Biomedicina">Biomedicina</option>
+                                <option value="Farmácia">Farmácia</option>
+                                <option value="Nutrição">Nutrição</option>
+                                <option value="Psicologia">Psicologia</option>
+                                <option value="Estética">Estética</option>
+                                <option value="Medicina Veterinária">Medicina Veterinária</option>
+                                <option value="__outra">Outra (digitar)</option>
+                                </select>
+                            </label>
+                            <label class="emb-field" id="emb-profession-other-field" hidden>
+                                <span>Digite a profissão ou cargo</span>
+                                <input type="text" id="emb-profession-other" placeholder="Ex: Cardiologista" maxlength="40">
+                            </label>
+                            <div class="emb-field">
+                                <span>Fonte</span>
+                                <div class="emb-font-options">
+                                <label class="emb-font-option">
+                                    <input type="radio" name="emb-font" value="Great Vibes" checked>
+                                    <span class="emb-font-preview font-great-vibes">Ana Souza</span>
+                                    <span class="emb-font-name">Great Vibes</span>
+                                </label>
+                                <label class="emb-font-option">
+                                    <input type="radio" name="emb-font" value="Dancing Script">
+                                    <span class="emb-font-preview font-dancing">Ana Souza</span>
+                                    <span class="emb-font-name">Dancing Script</span>
+                                </label>
+                                <label class="emb-font-option">
+                                    <input type="radio" name="emb-font" value="Playfair Display">
+                                    <span class="emb-font-preview font-playfair">Ana Souza</span>
+                                    <span class="emb-font-name">Playfair Display</span>
+                                </label>
+                                <label class="emb-font-option">
+                                    <input type="radio" name="emb-font" value="Montserrat">
+                                    <span class="emb-font-preview font-montserrat">Ana Souza</span>
+                                    <span class="emb-font-name">Montserrat</span>
+                                </label>
+                                </div>
+                            </div>
+                            <label class="emb-field">
+                                <span>Cor da linha <em>*</em></span>
+                                <input type="text" id="emb-thread" placeholder="Ex: Dourado, Azul-marinho" maxlength="30">
+                                <small class="emb-error" id="emb-thread-error" hidden>Informe a cor da linha do bordado.</small>
+                            </label>
+                        </div>
+
+                        <label class="emb-toggle">
+                            <input type="checkbox" id="emb-crest-toggle">
+                            <span>Adicionar brasão na manga</span>
+                        </label>
+                        <div class="emb-fields" id="emb-crest-fields" hidden>
+                            <div class="emb-crest-sides">
+                                <label class="emb-field">
+                                    <span>Manga direita</span>
+                                    <select id="emb-crest-right">
+                                    <option value="">Nenhum</option>
+                                    <option value="Medicina">Brasão de Medicina</option>
+                                    <option value="Enfermagem">Brasão de Enfermagem</option>
+                                    <option value="Odontologia">Brasão de Odontologia</option>
+                                    <option value="Fisioterapia">Brasão de Fisioterapia</option>
+                                    <option value="Biomedicina">Brasão de Biomedicina</option>
+                                    <option value="Farmácia">Brasão de Farmácia</option>
+                                    <option value="Nutrição">Brasão de Nutrição</option>
+                                    <option value="Psicologia">Brasão de Psicologia</option>
+                                    <option value="Estética">Brasão de Estética</option>
+                                    <option value="Medicina Veterinária">Brasão de Medicina Veterinária</option>
+                                    <option value="Logotipo próprio">Logotipo próprio</option>
+                                    </select>
+                                </label>
+                                <label class="emb-field">
+                                    <span>Manga esquerda</span>
+                                    <select id="emb-crest-left">
+                                    <option value="">Nenhum</option>
+                                    <option value="Medicina">Brasão de Medicina</option>
+                                    <option value="Enfermagem">Brasão de Enfermagem</option>
+                                    <option value="Odontologia">Brasão de Odontologia</option>
+                                    <option value="Fisioterapia">Brasão de Fisioterapia</option>
+                                    <option value="Biomedicina">Brasão de Biomedicina</option>
+                                    <option value="Farmácia">Brasão de Farmácia</option>
+                                    <option value="Nutrição">Brasão de Nutrição</option>
+                                    <option value="Psicologia">Brasão de Psicologia</option>
+                                    <option value="Estética">Brasão de Estética</option>
+                                    <option value="Medicina Veterinária">Brasão de Medicina Veterinária</option>
+                                    <option value="Logotipo próprio">Logotipo próprio</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <small class="emb-hint">Escolheu logotipo próprio ou da sua universidade? Envie a imagem na conversa do WhatsApp.</small>
+                            <small class="emb-error" id="emb-crest-error" hidden>Escolha o brasão de pelo menos uma manga.</small>
+                        </div>
+
+                        <label class="emb-field">
+                            <span>Observações</span>
+                            <textarea id="emb-notes" rows="2" maxlength="300" placeholder="Algum detalhe a mais? (opcional)"></textarea>
+                        </label>
+                    </form>
+
                     <!-- Modal Actions -->
                     <div class="modal-actions">
                         <a id="modal-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-wa-btn">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.936 9.936 0 0 0 4.779 1.218h.004c5.506 0 9.99-4.478 9.99-9.985C22.007 6.478 17.519 2 12.012 2zm5.772 14.154c-.237.669-1.377 1.29-1.923 1.377-.497.08-1.147.14-3.324-.76-2.784-1.151-4.582-3.99-4.722-4.177-.138-.187-1.127-1.498-1.127-2.858 0-1.36.711-2.028.963-2.296.252-.268.552-.335.736-.335.184 0 .367.002.527.01.166.008.391-.063.612.467.228.549.78 1.902.848 2.039.068.138.114.3.023.483-.092.184-.138.3-.275.46-.138.16-.29.358-.413.48-.138.138-.282.289-.122.565.16.276.711 1.173 1.526 1.898.815.725 1.503.95 1.716 1.053.214.103.338.087.464-.061.126-.148.55-.641.696-.86.147-.22.294-.183.498-.107.203.076 1.29.609 1.514.721.224.112.373.168.429.263.056.096.056.554-.181 1.223z"/>
                             </svg>
-                            COMPRAR PELO WHATSAPP
+                            ENVIAR PEDIDO PELO WHATSAPP
                         </a>
                         <button id="modal-add-cart-btn" class="btn btn-outline modal-cart-btn">
                             ADICIONAR À SACOLA
