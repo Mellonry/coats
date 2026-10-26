@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COATS | Alta Costura Profissional de Luxo</title>
-    <meta name="description" content="Descubra a coleção de jalecos e scrubs premium da COATS. Peças de alta costura com caimento perfeito, tecidos tecnológicos e botões artesanais.">
+    <title>COATS | Alta Costura Profissional</title>
+    <meta name="description" content="Conheça a coleção de jalecos e scrubs da COATS: modelos femininos e masculinos nos tamanhos P, M e G, com bordado personalizado. Loja física em Feira de Santana - BA.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -147,10 +147,6 @@
             <div class="hero-slide active">
                 <img src="images/IMG_0216.webp" alt="" class="hero-poster-bg" aria-hidden="true">
                 <img src="images/IMG_0216.webp" alt="Equipe COATS" class="hero-poster">
-                <video class="hero-video" autoplay loop muted playsinline>
-                    <source src="images/IMG_4882.MOV" type="video/mp4">
-                    <source src="images/IMG_4882.MOV" type="video/quicktime">
-                </video>
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
                     <span class="hero-tag animate-in">Últimas horas</span>
@@ -220,22 +216,17 @@
             </div>
         </section>
 
-        <!-- Split Editorial Section ("Alfaiataria Chic") -->
-        <section id="alfaiataria" class="split-editorial">
+        <!-- Seção Alfaiataria (em aberto): aguardando fotos de estúdio.
+             Para publicar: preencha a imagem, o título e o texto abaixo e remova o atributo "hidden". -->
+        <section id="alfaiataria" class="split-editorial" hidden>
             <div class="split-left">
-                <video class="editorial-video" autoplay loop muted playsinline poster="images/fabric_detail.webp">
-                    <source src="images/IMG_4919.MOV" type="video/mp4">
-                    <source src="images/IMG_4919.MOV" type="video/quicktime">
-                </video>
+                <img src="" alt="" class="editorial-video">
             </div>
             <div class="split-right">
                 <div class="editorial-box">
-                    <div class="editorial-logo">
-                        <img src="images/alfaiataria_coat.webp" alt="Jaleco Alfaiataria em Cabide" class="editorial-mini">
-                    </div>
-                    <h2 class="editorial-title">Alfaiataria Coats</h2>
-                    <p class="editorial-desc">A união sublime de botões dourados ricamente desenhados, lapelas estruturadas e forros premium. Uma verdadeira declaração de profissionalismo e estilo no seu dia a dia.</p>
-                    <a href="#produtos" class="btn btn-primary">EXPLORAR DETALHES</a>
+                    <h2 class="editorial-title"></h2>
+                    <p class="editorial-desc"></p>
+                    <a href="#produtos" class="btn btn-primary">VER COLEÇÃO</a>
                 </div>
             </div>
         </section>
@@ -275,7 +266,7 @@
                 </div>
                 <div class="embroidery-options-column">
                     <!-- Option 1: Name -->
-                    <div class="embroidery-option-card">
+                    <div class="embroidery-option-card" role="button" tabindex="0" aria-expanded="false">
                         <div class="embroidery-option-icon">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
@@ -284,11 +275,30 @@
                         <div class="embroidery-option-info">
                             <h3 class="embroidery-option-title">Nome Personalizado</h3>
                             <p class="embroidery-option-desc">Borde seu primeiro nome ou nome completo no peito, com precisão milimétrica e acabamento sofisticado.</p>
-                            <div class="embroidery-preview-sample">Dra. Evelyn Reed</div>
+                            <div class="embroidery-preview-sample">Dra. Ana Souza</div>
+                            <span class="embroidery-option-hint">Toque para ver as fontes</span>
+                            <div class="embroidery-option-panel">
+                                <div class="embroidery-font-sample">
+                                    <span class="embroidery-font-preview font-great-vibes">Dra. Ana Souza</span>
+                                    <span class="embroidery-font-label">Great Vibes</span>
+                                </div>
+                                <div class="embroidery-font-sample">
+                                    <span class="embroidery-font-preview font-dancing">Dra. Ana Souza</span>
+                                    <span class="embroidery-font-label">Dancing Script</span>
+                                </div>
+                                <div class="embroidery-font-sample">
+                                    <span class="embroidery-font-preview font-playfair">Dra. Ana Souza</span>
+                                    <span class="embroidery-font-label">Playfair Display</span>
+                                </div>
+                                <div class="embroidery-font-sample">
+                                    <span class="embroidery-font-preview font-montserrat">Dra. Ana Souza</span>
+                                    <span class="embroidery-font-label">Montserrat</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Option 2: Title -->
-                    <div class="embroidery-option-card">
+                    <div class="embroidery-option-card" role="button" tabindex="0" aria-expanded="false">
                         <div class="embroidery-option-icon">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -299,10 +309,23 @@
                             <h3 class="embroidery-option-title">Cargo ou Título</h3>
                             <p class="embroidery-option-desc">Sua especialidade ou cargo bordado na manga, em tipografias limpas e de fácil leitura.</p>
                             <div class="embroidery-preview-sans">Cardiologista</div>
+                            <span class="embroidery-option-hint">Toque para ver exemplos</span>
+                            <div class="embroidery-option-panel embroidery-title-list">
+                                <span class="embroidery-title-chip">Medicina</span>
+                                <span class="embroidery-title-chip">Enfermagem</span>
+                                <span class="embroidery-title-chip">Odontologia</span>
+                                <span class="embroidery-title-chip">Fisioterapia</span>
+                                <span class="embroidery-title-chip">Biomedicina</span>
+                                <span class="embroidery-title-chip">Farmácia</span>
+                                <span class="embroidery-title-chip">Nutrição</span>
+                                <span class="embroidery-title-chip">Psicologia</span>
+                                <span class="embroidery-title-chip">Estética</span>
+                                <span class="embroidery-title-chip">Medicina Veterinária</span>
+                            </div>
                         </div>
                     </div>
                     <!-- Option 3: Emblem -->
-                    <div class="embroidery-option-card">
+                    <div class="embroidery-option-card" role="button" tabindex="0" aria-expanded="false">
                         <div class="embroidery-option-icon">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -311,6 +334,49 @@
                         <div class="embroidery-option-info">
                             <h3 class="embroidery-option-title">Brasão ou Logotipo</h3>
                             <p class="embroidery-option-desc">Bordado na manga, reproduzimos o símbolo da sua profissão, da sua universidade ou o logotipo exclusivo do seu consultório ou clínica.</p>
+                            <span class="embroidery-option-hint">Toque para ver os brasões</span>
+                            <div class="embroidery-option-panel embroidery-crest-grid">
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/medicina.webp" alt="Brasão de Medicina" loading="lazy">
+                                    <span>Medicina</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/enfermagem.webp" alt="Brasão de Enfermagem" loading="lazy">
+                                    <span>Enfermagem</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/odontologia.webp" alt="Brasão de Odontologia" loading="lazy">
+                                    <span>Odontologia</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/fisioterapia.webp" alt="Brasão de Fisioterapia" loading="lazy">
+                                    <span>Fisioterapia</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/biomedicina.webp" alt="Brasão de Biomedicina" loading="lazy">
+                                    <span>Biomedicina</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/farmacia.webp" alt="Brasão de Farmácia" loading="lazy">
+                                    <span>Farmácia</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/nutricao.webp" alt="Brasão de Nutrição" loading="lazy">
+                                    <span>Nutrição</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/psicologia.webp" alt="Brasão de Psicologia" loading="lazy">
+                                    <span>Psicologia</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/estetica.webp" alt="Brasão de Estética" loading="lazy">
+                                    <span>Estética</span>
+                                </div>
+                                <div class="embroidery-crest">
+                                    <img src="images/brasoes/veterinaria.webp" alt="Brasão de Medicina Veterinária" loading="lazy">
+                                    <span>Medicina Veterinária</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,7 +387,7 @@
         <section id="localizacao" class="store-location-section">
             <div class="section-header text-center">
                 <span class="section-tag">Nossa Presença</span>
-                <h2 class="section-title">Ateliê & Loja Física</h2>
+                <h2 class="section-title">Loja Física</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="store-location-container">
@@ -336,7 +402,7 @@
                 </div>
                 <div class="store-info-column">
                     <h3 class="store-subtitle">Venha Viver a Experiência COATS</h3>
-                    <p class="store-desc">Conheça nosso espaço físico exclusivo. Atendimento individual e personalizado, com prova de modelos nos tamanhos disponíveis e a coleção completa com pronta entrega para você sentir a textura e qualidade da alta costura.</p>
+                    <p class="store-desc">Conheça nosso espaço físico. Atendimento personalizado para você experimentar os modelos nos tamanhos P, M e G e conhecer de perto a coleção completa, com pronta entrega.</p>
                     <div class="store-details-list">
                         <div class="store-detail-item">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
@@ -379,7 +445,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="https://wa.me/5575981256201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20visita%20ao%20ateli%C3%AA%20f%C3%ADsico%20da%20COATS%21" class="btn btn-primary store-visit-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/5575981256201?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20visita%20%C3%A0%20loja%20f%C3%ADsica%20da%20COATS%21" class="btn btn-primary store-visit-btn" target="_blank" rel="noopener noreferrer">
                         AGENDAR VISITA VIP
                     </a>
                 </div>
@@ -501,10 +567,10 @@
             <div class="footer-column">
                 <h3>Coleções</h3>
                 <ul>
-                    <li><a href="#alfaiataria">Coleção Legado</a></li>
+                    <li><a href="#produtos">Coleção Legado</a></li>
                     <li><a href="#produtos">Jalecos Premium</a></li>
                     <li><a href="#produtos">Scrubs Tecnológicos</a></li>
-                    <li><a href="#localizacao">Ateliê Feira de Santana</a></li>
+                    <li><a href="#localizacao">Loja Feira de Santana</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -558,14 +624,13 @@
                 </div>
                 <!-- Right: Product Info & Actions -->
                 <div class="modal-info-column">
-                    <span id="modal-category" class="modal-tag">Jaleco Premium</span>
-                    <h2 id="modal-title" class="modal-title">Jaleco Eliza</h2>
+                    <span id="modal-category" class="modal-tag"></span>
+                    <h2 id="modal-title" class="modal-title"></h2>
                     <div class="modal-price-box">
                         <span id="modal-price" class="modal-price"></span>
-                        <span id="modal-original-price" class="modal-original-price"></span>
-                        <div id="modal-pix" class="modal-pix-badge"></div>
                     </div>
-                    <p id="modal-desc" class="modal-desc">Modelagem de alfaiataria exclusiva com caimento perfeito, tecido tecnológico com proteção UV e acabamentos de alto luxo.</p>
+                    <p id="modal-desc" class="modal-desc"></p>
+                    <p id="modal-fabric" class="modal-fabric"></p>
 
                     <!-- Color Selector (only rendered when the product has color variants) -->
                     <div id="modal-color-selector" class="modal-color-selector" style="display: none;">
@@ -577,12 +642,9 @@
                     <div class="modal-size-selector">
                         <label class="size-label">Selecione o Tamanho:</label>
                         <div class="size-options">
-                            <button class="size-btn active" data-size="PP">PP</button>
                             <button class="size-btn" data-size="P">P</button>
-                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn active" data-size="M">M</button>
                             <button class="size-btn" data-size="G">G</button>
-                            <button class="size-btn" data-size="GG">GG</button>
-                            <button class="size-btn" data-size="EGG">EGG</button>
                         </div>
                     </div>
 

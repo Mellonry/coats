@@ -177,339 +177,517 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const products = [
         {
-            id: "J_ELIZA",
-            name: "Jaleco Eliza",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
+            id: "J_KATHERINE",
+            name: "Jaleco Katherine",
+            price: 199.99,
             category: "jaleco",
             gender: "feminino",
-            badge: "-20%",
-            description: "O Jaleco Eliza é a expressão máxima da alfaiataria médica feminina. Com gola estruturada, botões refinados e tecido de alta densidade com elastano que garante flexibilidade e caimento impecável.",
+            badge: "",
+            description: "Jaleco de gola tradicional, com mangas estilo blazer e punho clássico. Possui bolsos funcionais e fechamento frontal por botões, proporcionando um visual elegante e profissional.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0016.webp",
-                "images/IMG_0018.webp",
-                "images/IMG_0022.webp",
-                "images/IMG_0041.webp",
-                "images/IMG_0229.webp",
-                "images/IMG_0230.webp",
-                "images/IMG_0233.webp"
+                "images/catalogo/katherine-01.webp",
+                "images/catalogo/katherine-02.webp",
+                "images/catalogo/katherine-03.webp",
+                "images/catalogo/katherine-04.webp",
+                "images/catalogo/katherine-05.webp",
+                "images/catalogo/katherine-06.webp"
             ],
             colors: [
                 {
                     name: "Branco",
                     hex: "#ffffff",
-                    images: ["images/IMG_0016.webp", "images/IMG_0018.webp", "images/IMG_0022.webp", "images/IMG_0041.webp"]
+                    images: [
+                        "images/catalogo/katherine-01.webp",
+                        "images/catalogo/katherine-02.webp",
+                        "images/catalogo/katherine-03.webp",
+                        "images/catalogo/katherine-04.webp",
+                        "images/catalogo/katherine-05.webp",
+                        "images/catalogo/katherine-06.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
                 },
                 {
                     name: "Preto",
-                    hex: "#1c1a19",
-                    images: ["images/IMG_0229.webp", "images/IMG_0230.webp", "images/IMG_0233.webp"]
+                    hex: "#1c1a19"
                 }
             ]
         },
         {
-            id: "J_JOAO",
-            name: "Jaleco João",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
+            id: "J_ELOAH",
+            name: "Jaleco Eloah",
+            price: 189.99,
             category: "jaleco",
-            gender: "masculino",
-            badge: "Masculino",
-            description: "Corte macio e contemporâneo para profissionais exigentes. O Jaleco João alia presença marcante com tecido bi-stretch respirável e bolsos utilitários internos.",
-            images: [
-                "images/IMG_0024.webp",
-                "images/IMG_0027.webp"
-            ]
-        },
-        {
-            id: "J_RUBENS",
-            name: "Jaleco Rubens",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
-            category: "jaleco",
-            gender: "masculino",
-            badge: "Lançamento",
-            description: "Design minimalista e sofisticado. O modelo Rubens destaca-se pelo colarinho de alfaiate, botoeiros embutidos e acabamento acetinado de extrema elegância.",
-            images: [
-                "images/IMG_0038.webp",
-                "images/IMG_0059.webp",
-                "images/IMG_0061.webp",
-                "images/IMG_0065.webp"
-            ]
-        },
-        {
-            id: "J_ANDRE",
-            name: "Jaleco André",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
-            category: "jaleco",
-            gender: "masculino",
+            gender: "feminino",
             badge: "",
-            description: "Sofisticação e atemporalidade para o dia a dia. O Jaleco André possui lapelas impecáveis e caimento ajustado ao corpo sem limitar seus movimentos.",
+            description: "Jaleco de gola tradicional, com mangas estilo blazer e punho clássico. Possui bolsos funcionais e fechamento frontal por botões, proporcionando um visual elegante e profissional.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0057.webp",
-                "images/IMG_0067.webp",
-                "images/IMG_0069.webp",
-                "images/IMG_0072.webp",
-                "images/IMG_0211.webp"
-            ]
-        },
-        {
-            id: "J_RUBENS_ANDRE",
-            name: "Jaleco Rubens & André",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
-            category: "jaleco",
-            gender: "masculino",
-            badge: "Duo Luxe",
-            description: "Coleção especial integrando as melhores linhas de alfaiataria masculina com botões duplos e forro acetinado de alta respirabilidade. Todas as peças são vendidas individualmente.",
-            images: [
-                "images/IMG_0046.webp",
-                "images/IMG_0052.webp"
-            ]
-        },
-        {
-            id: "J_ALICE",
-            name: "Jaleco Alice",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
-            category: "jaleco",
-            gender: "feminino",
-            badge: "Mais Vendido",
-            description: "Um clássico da alta costura médica. Detalhes em pregas sutis, cintura desenhada e punhos italianos com botões refinados.",
-            images: [
-                "images/IMG_0086.webp",
-                "images/IMG_0089.webp",
-                "images/IMG_0093.webp",
-                "images/IMG_0108.webp"
-            ]
-        },
-        {
-            id: "J_KATHERINE",
-            name: "Jaleco Katherine",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
-            category: "jaleco",
-            gender: "feminino",
-            badge: "-20%",
-            description: "O modelo Katherine é referência em delicadeza e luxo. Possui gola V aplicada com caimento impecável, ideal para médicas e especialistas em estética.",
-            images: [
-                "images/IMG_0107.webp",
-                "images/IMG_0110.webp",
-                "images/IMG_0116.webp",
-                "images/IMG_0185.webp",
-                "images/IMG_0190.webp",
-                "images/IMG_0200.webp"
+                "images/catalogo/eloah-01.webp",
+                "images/catalogo/eloah-02.webp",
+                "images/catalogo/eloah-03.webp",
+                "images/catalogo/eloah-04.webp"
+            ],
+            colors: [
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/eloah-01.webp",
+                        "images/catalogo/eloah-02.webp",
+                        "images/catalogo/eloah-03.webp",
+                        "images/catalogo/eloah-04.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19"
+                }
             ]
         },
         {
             id: "J_LISE",
             name: "Jaleco Lise",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
+            price: 199.99,
             category: "jaleco",
             gender: "feminino",
-            badge: "Cinto Ajustável",
-            description: "Modelagem multifuncional com cinto removível de alta costura, permitindo uso acinturado ou fluido. Tecido com elastano de secagem rápida.",
+            badge: "",
+            description: "Jaleco de gola redonda e mangas estilo boneca, com fechamento em zíper. Disponível nas opções com ou sem cinto, permitindo diferentes propostas de uso e acabamento.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0118.webp",
-                "images/IMG_0123.webp",
-                "images/IMG_0132.webp",
-                "images/IMG_0133.webp",
-                "images/IMG_0166.webp",
-                "images/IMG_0169.webp",
-                "images/IMG_0171.webp",
-                "images/IMG_0173.webp",
-                "images/IMG_0244.webp",
-                "images/IMG_0251.webp",
-                "images/IMG_0258.webp",
-                "images/IMG_0263.webp",
-                "images/IMG_0265.webp",
-                "images/IMG_0266.webp",
-                "images/IMG_0272.webp"
+                "images/catalogo/lise-01.webp",
+                "images/catalogo/lise-02.webp",
+                "images/catalogo/lise-03.webp",
+                "images/catalogo/lise-04.webp",
+                "images/catalogo/lise-05.webp",
+                "images/catalogo/lise-06.webp"
+            ],
+            colors: [
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/lise-01.webp",
+                        "images/catalogo/lise-02.webp",
+                        "images/catalogo/lise-03.webp",
+                        "images/catalogo/lise-04.webp",
+                        "images/catalogo/lise-05.webp",
+                        "images/catalogo/lise-06.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19"
+                }
+            ]
+        },
+        {
+            id: "J_MARIAH",
+            name: "Jaleco Mariah",
+            price: 189.99,
+            category: "jaleco",
+            gender: "feminino",
+            badge: "",
+            description: "Jaleco de gola redonda e mangas estilo boneca, com fechamento em zíper.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
+            images: [
+                "images/catalogo/mariah-01.webp",
+                "images/catalogo/mariah-02.webp",
+                "images/catalogo/mariah-03.webp",
+                "images/catalogo/mariah-04.webp"
+            ],
+            colors: [
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/mariah-01.webp",
+                        "images/catalogo/mariah-02.webp",
+                        "images/catalogo/mariah-03.webp",
+                        "images/catalogo/mariah-04.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19"
+                }
+            ]
+        },
+        {
+            id: "J_ELIZA",
+            name: "Jaleco Eliza",
+            price: 269.99,
+            category: "jaleco",
+            gender: "feminino",
+            badge: "",
+            description: "Jaleco em estilo sobretudo, com fechamento transpassado que proporciona uma proposta elegante e marcante. Uma peça sofisticada para compor o visual profissional.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
+            images: [
+                "images/catalogo/eliza-01.webp",
+                "images/catalogo/eliza-02.webp",
+                "images/catalogo/eliza-03.webp",
+                "images/catalogo/eliza-04.webp",
+                "images/catalogo/eliza-05.webp"
+            ],
+            colors: [
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/eliza-01.webp",
+                        "images/catalogo/eliza-02.webp",
+                        "images/catalogo/eliza-03.webp",
+                        "images/catalogo/eliza-04.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19",
+                    images: [
+                        "images/catalogo/eliza-05.webp"
+                    ]
+                }
             ]
         },
         {
             id: "J_BELL",
             name: "Jaleco Bell",
-            price: 520.00,
-            originalPrice: 650.00,
-            pixPrice: 494.00,
+            price: 219.99,
             category: "jaleco",
             gender: "feminino",
             badge: "",
-            description: "Linhas limpas e caimento estruturado. O Jaleco Bell transmite autoridade e leveza com gola notched e bolsos invisíveis laterais.",
+            description: "Jaleco de gola tradicional, com mangas estilo blazer e punho largo com três botões. Possui fechamento frontal por um botão, trazendo um toque elegante e sofisticado à peça.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0139.webp",
-                "images/IMG_0144.webp",
-                "images/IMG_0146.webp",
-                "images/IMG_0147.webp"
-            ]
-        },
-        {
-            id: "J_COATS",
-            name: "Jaleco COATS Edição Ouro",
-            price: 560.00,
-            originalPrice: 700.00,
-            pixPrice: 532.00,
-            category: "jaleco",
-            gender: "unissex",
-            badge: "Edição Ouro",
-            description: "A peça emblemática que carrega a assinatura COATS. Botões folheados a ouro, tecido gabardine nobre e acabamento feito à mão.",
-            images: [
-                "images/IMG_0079.webp",
-                "images/IMG_0213.webp",
-                "images/IMG_0221.webp"
-            ]
-        },
-        {
-            id: "S_JOHN",
-            name: "Scrub John",
-            price: 320.00,
-            originalPrice: 390.00,
-            pixPrice: 304.00,
-            category: "scrub",
-            gender: "masculino",
-            badge: "Tecnológico",
-            description: "Conjunto Scrub masculino com modelagem esportiva de luxo. Tecido ultra-respirável com ação antibacteriana e secagem rápida.",
-            images: [
-                "images/IMG_0288.webp",
-                "images/IMG_0297.webp",
-                "images/IMG_0299.webp",
-                "images/IMG_0303.webp",
-                "images/IMG_0305.webp",
-                "images/IMG_0309.webp",
-                "images/IMG_0311.webp",
-                "images/IMG_0316.webp"
+                "images/catalogo/bell-01.webp",
+                "images/catalogo/bell-02.webp",
+                "images/catalogo/bell-03.webp",
+                "images/catalogo/bell-04.webp"
             ],
             colors: [
                 {
-                    name: "Marinho",
-                    hex: "#1c2b4a",
-                    images: ["images/IMG_0288.webp", "images/IMG_0303.webp", "images/IMG_0305.webp", "images/IMG_0309.webp", "images/IMG_0311.webp"]
+                    name: "Branco",
+                    hex: "#ffffff"
                 },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19",
+                    images: [
+                        "images/catalogo/bell-01.webp",
+                        "images/catalogo/bell-02.webp",
+                        "images/catalogo/bell-03.webp",
+                        "images/catalogo/bell-04.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            id: "J_RUBENS",
+            name: "Jaleco Rubens",
+            price: 189.99,
+            category: "jaleco",
+            gender: "masculino",
+            badge: "",
+            description: "Jaleco masculino com bolso pequeno e dois bolsos laterais, oferecendo praticidade e funcionalidade para a rotina profissional.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
+            images: [
+                "images/catalogo/rubens-01.webp",
+                "images/catalogo/rubens-02.webp",
+                "images/catalogo/rubens-03.webp",
+                "images/catalogo/rubens-04.webp",
+                "images/catalogo/rubens-05.webp"
+            ],
+            colors: [
                 {
                     name: "Branco",
                     hex: "#ffffff",
-                    images: ["images/IMG_0297.webp", "images/IMG_0299.webp", "images/IMG_0316.webp"]
+                    images: [
+                        "images/catalogo/rubens-01.webp",
+                        "images/catalogo/rubens-02.webp",
+                        "images/catalogo/rubens-03.webp",
+                        "images/catalogo/rubens-04.webp",
+                        "images/catalogo/rubens-05.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19"
+                }
+            ]
+        },
+        {
+            id: "J_ANDRE",
+            name: "Jaleco André",
+            price: 199.99,
+            category: "jaleco",
+            gender: "masculino",
+            badge: "",
+            description: "Jaleco masculino com fechamento frontal em zíper, trazendo uma proposta moderna, prática e funcional para o dia a dia profissional.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
+            images: [
+                "images/catalogo/andre-01.webp",
+                "images/catalogo/andre-02.webp",
+                "images/catalogo/andre-03.webp",
+                "images/catalogo/andre-04.webp",
+                "images/catalogo/andre-05.webp"
+            ],
+            colors: [
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/andre-01.webp",
+                        "images/catalogo/andre-02.webp",
+                        "images/catalogo/andre-03.webp",
+                        "images/catalogo/andre-04.webp",
+                        "images/catalogo/andre-05.webp"
+                    ]
+                },
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
+                },
+                {
+                    name: "Preto",
+                    hex: "#1c1a19"
                 }
             ]
         },
         {
             id: "S_ANNIE",
             name: "Scrub Annie",
-            price: 320.00,
-            originalPrice: 390.00,
-            pixPrice: 304.00,
+            price: 179.99,
             category: "scrub",
             gender: "feminino",
-            badge: "Mais Vendido",
-            description: "O Scrub feminino dos sonhos. Decote V suave, calça jogger funcional com bolsos estratégicos e elástico de alto conforto na cintura.",
+            badge: "",
+            description: "Blusa de scrub com gola redonda e mangas curtas. Possui fechamento frontal com botões invisíveis, proporcionando um visual clean, delicado e profissional.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0321.webp",
-                "images/IMG_0326.webp",
-                "images/IMG_0331.webp",
-                "images/IMG_0341.webp",
-                "images/IMG_0343.webp",
-                "images/IMG_0345.webp",
-                "images/IMG_0349.webp",
-                "images/IMG_0353.webp",
-                "images/IMG_0361.webp",
-                "images/IMG_0363.webp"
+                "images/catalogo/annie-01.webp",
+                "images/catalogo/annie-02.webp",
+                "images/catalogo/annie-03.webp",
+                "images/catalogo/annie-04.webp"
             ],
             colors: [
                 {
-                    name: "Marinho",
+                    name: "Azul-marinho",
                     hex: "#1c2b4a",
-                    images: ["images/IMG_0321.webp", "images/IMG_0326.webp", "images/IMG_0331.webp", "images/IMG_0341.webp", "images/IMG_0343.webp"]
-                },
-                {
-                    name: "Vermelho",
-                    hex: "#b5241e",
-                    images: ["images/IMG_0345.webp", "images/IMG_0349.webp"]
+                    images: [
+                        "images/catalogo/annie-02.webp",
+                        "images/catalogo/annie-04.webp"
+                    ]
                 },
                 {
                     name: "Branco",
                     hex: "#ffffff",
-                    images: ["images/IMG_0353.webp", "images/IMG_0361.webp", "images/IMG_0363.webp"]
+                    images: [
+                        "images/catalogo/annie-03.webp"
+                    ]
+                },
+                {
+                    name: "Marsala",
+                    hex: "#7b2331",
+                    images: [
+                        "images/catalogo/annie-01.webp"
+                    ]
+                }
+            ]
+        },
+        {
+            id: "S_CLARA",
+            name: "Scrub Clara",
+            price: 179.99,
+            category: "scrub",
+            gender: "feminino",
+            badge: "",
+            description: "",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
+            images: [
+                "images/catalogo/clara-01.webp",
+                "images/catalogo/clara-02.webp",
+                "images/catalogo/clara-03.webp",
+                "images/catalogo/clara-04.webp"
+            ],
+            colors: [
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a",
+                    images: [
+                        "images/catalogo/clara-04.webp"
+                    ]
+                },
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/clara-01.webp",
+                        "images/catalogo/clara-02.webp",
+                        "images/catalogo/clara-03.webp"
+                    ]
+                },
+                {
+                    name: "Marsala",
+                    hex: "#7b2331"
                 }
             ]
         },
         {
             id: "S_JAMES",
             name: "Scrub James",
-            price: 320.00,
-            originalPrice: 390.00,
-            pixPrice: 304.00,
+            price: 199.99,
             category: "scrub",
             gender: "masculino",
             badge: "",
-            description: "Ergonomia avançada para cirurgiões e médicos atuantes. Tecido quadri-stretch com máxima flexibilidade e acabamento anti-pilling.",
+            description: "Blusa gola V, bolso sobreposto na altura do peito e na frente, calça cós estilo calça social na frente, elástico atrás e bolsos laterais.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0366.webp",
-                "images/IMG_0367.webp",
-                "images/IMG_0372.webp",
-                "images/IMG_0375.webp",
-                "images/IMG_0376.webp",
-                "images/IMG_0381.webp"
+                "images/catalogo/james-01.webp",
+                "images/catalogo/james-02.webp",
+                "images/catalogo/james-03.webp",
+                "images/catalogo/james-04.webp"
             ],
             colors: [
                 {
-                    name: "Azul",
-                    hex: "#1f7fd1",
-                    images: ["images/IMG_0366.webp", "images/IMG_0367.webp", "images/IMG_0372.webp"]
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a"
                 },
                 {
-                    name: "Vermelho",
-                    hex: "#b5241e",
-                    images: ["images/IMG_0375.webp", "images/IMG_0376.webp", "images/IMG_0381.webp"]
+                    name: "Branco",
+                    hex: "#ffffff"
+                },
+                {
+                    name: "Marsala",
+                    hex: "#7b2331",
+                    images: [
+                        "images/catalogo/james-01.webp",
+                        "images/catalogo/james-04.webp"
+                    ]
                 }
             ]
         },
         {
-            id: "S_MARIE",
-            name: "Scrub Marie",
-            price: 320.00,
-            originalPrice: 390.00,
-            pixPrice: 304.00,
+            id: "S_JOHN",
+            name: "Scrub John",
+            price: 199.99,
             category: "scrub",
-            gender: "feminino",
-            badge: "Novidade",
-            description: "Elegância minimalista em formato Scrub. Corte acinturado com mangas curtas de caimento fluido e toque incrivelmente macio.",
+            gender: "masculino",
+            badge: "",
+            description: "Scrub com gola V, recortes no ombro e bolsos recortados na frente, calça cós estilo calça social na frente, elástico atrás e bolsos laterais.",
+            fabric: "96% poliamida, 4% elastano",
+            sizes: [
+                "P",
+                "M",
+                "G"
+            ],
             images: [
-                "images/IMG_0396.webp",
-                "images/IMG_0408.webp",
-                "images/IMG_0411.webp",
-                "images/IMG_0413.webp"
-            ]
-        },
-        {
-            id: "S_COATS",
-            name: "Scrub COATS High-Tech",
-            price: 340.00,
-            originalPrice: 420.00,
-            pixPrice: 323.00,
-            category: "scrub",
-            gender: "feminino",
-            badge: "Premium",
-            description: "Engenharia têxtil de ponta em scrubs hospitalares. Repelente a líquidos, proteção solar UPF50+ e durabilidade extrema.",
-            images: [
-                "images/IMG_0335.webp",
-                "images/IMG_0425.webp",
-                "images/IMG_0426.webp",
-                "images/IMG_0435.webp",
-                "images/IMG_0445.webp",
-                "images/IMG_0459.webp",
-                "images/IMG_0463.webp",
-                "images/IMG_0505.webp"
+                "images/catalogo/john-01.webp",
+                "images/catalogo/john-02.webp",
+                "images/catalogo/john-03.webp",
+                "images/catalogo/john-04.webp"
+            ],
+            colors: [
+                {
+                    name: "Azul-marinho",
+                    hex: "#1c2b4a",
+                    images: [
+                        "images/catalogo/john-01.webp",
+                        "images/catalogo/john-02.webp",
+                        "images/catalogo/john-03.webp"
+                    ]
+                },
+                {
+                    name: "Branco",
+                    hex: "#ffffff",
+                    images: [
+                        "images/catalogo/john-04.webp"
+                    ]
+                },
+                {
+                    name: "Marsala",
+                    hex: "#7b2331"
+                }
             ]
         }
     ];
@@ -562,10 +740,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="product-details">
                         <h3 class="product-title">${item.name}</h3>
                         <div class="product-pricing">
-                            <span class="original-price">R$ ${item.originalPrice.toFixed(2).replace('.', ',')}</span>
                             <span class="sale-price">R$ ${item.price.toFixed(2).replace('.', ',')}</span>
                         </div>
-                        <p class="pix-price">R$ ${item.pixPrice.toFixed(2).replace('.', ',')} com Pix</p>
                     </div>
                 </div>
             `;
@@ -611,13 +787,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!productModal) return;
 
         document.getElementById('modal-title').textContent = product.name;
-        const categoryLabel = product.category === 'jaleco' ? 'Jaleco de Luxo' : 'Scrub Tecnológico';
+        const categoryLabel = product.category === 'jaleco' ? 'Jaleco' : 'Scrub';
         const genderLabel = product.gender === 'feminino' ? 'Feminino' : product.gender === 'masculino' ? 'Masculino' : 'Unissex';
         document.getElementById('modal-category').textContent = `${categoryLabel} ${genderLabel}`;
         document.getElementById('modal-price').textContent = `R$ ${product.price.toFixed(2).replace('.', ',')}`;
-        document.getElementById('modal-original-price').textContent = `R$ ${product.originalPrice.toFixed(2).replace('.', ',')}`;
-        document.getElementById('modal-pix').textContent = `R$ ${product.pixPrice.toFixed(2).replace('.', ',')} no PIX (5% OFF)`;
         document.getElementById('modal-desc').textContent = product.description;
+        document.getElementById('modal-fabric').textContent = `Tecido: ${product.fabric}`;
 
         const mainImg = document.getElementById('modal-main-img');
         const thumbsBar = document.getElementById('modal-thumbnails');
@@ -646,11 +821,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (product.colors && product.colors.length) {
             colorSelector.style.display = 'block';
-            selectedColorModal = product.colors[0].name;
+            // Start on the color shown in the cover photo
+            const defaultColor = product.colors.find(c => c.images && c.images.includes(product.images[0])) || product.colors[0];
+            selectedColorModal = defaultColor.name;
             colorNameLabel.textContent = selectedColorModal;
 
             colorOptions.innerHTML = product.colors.map((c, idx) => `
-                <button class="color-swatch ${idx === 0 ? 'active' : ''}" data-color="${c.name}" style="background-color: ${c.hex};" title="${c.name}" aria-label="${c.name}"></button>
+                <button class="color-swatch ${c.name === selectedColorModal ? 'active' : ''}" data-color="${c.name}" style="background-color: ${c.hex};" title="${c.name}" aria-label="${c.name}"></button>
             `).join('');
 
             colorOptions.querySelectorAll('.color-swatch').forEach(swatch => {
@@ -660,12 +837,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     selectedColorModal = swatch.dataset.color;
                     colorNameLabel.textContent = selectedColorModal;
                     const chosen = product.colors.find(c => c.name === selectedColorModal);
-                    renderGallery(chosen.images);
+                    if (chosen.images) {
+                        const thumb = thumbsBar.querySelector(`.modal-thumb[data-src="${chosen.images[0]}"]`);
+                        if (thumb) thumb.click();
+                    }
                     updateWaLink();
                 });
             });
 
-            renderGallery(product.colors[0].images);
+            renderGallery(product.images);
         } else {
             colorSelector.style.display = 'none';
             colorOptions.innerHTML = '';
@@ -685,6 +865,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Size selector interaction
         const sizeBtns = productModal.querySelectorAll('.size-btn');
+        selectedSizeModal = 'M';
+        sizeBtns.forEach(b => b.classList.toggle('active', b.dataset.size === selectedSizeModal));
         sizeBtns.forEach(btn => {
             btn.onclick = () => {
                 sizeBtns.forEach(b => b.classList.remove('active'));
@@ -699,7 +881,8 @@ document.addEventListener('DOMContentLoaded', () => {
         addCartBtn.onclick = () => {
             const cartId = selectedColorModal ? `${product.id}_${selectedSizeModal}_${selectedColorModal}` : `${product.id}_${selectedSizeModal}`;
             const variantLabel = selectedColorModal ? `${selectedSizeModal}, ${selectedColorModal}` : selectedSizeModal;
-            const cartImg = selectedColorModal ? product.colors.find(c => c.name === selectedColorModal).images[0] : product.images[0];
+            const chosenColor = selectedColorModal ? product.colors.find(c => c.name === selectedColorModal) : null;
+            const cartImg = chosenColor && chosenColor.images ? chosenColor.images[0] : product.images[0];
             const existing = cart.find(i => i.id === cartId);
             if (existing) {
                 existing.quantity += 1;
@@ -871,6 +1054,37 @@ document.addEventListener('DOMContentLoaded', () => {
             showToast('E-mail cadastrado com sucesso!');
         });
     }
+
+    // ==========================================================================
+    // EMBROIDERY OPTION CARDS (expand to show fonts, titles and crests)
+    // ==========================================================================
+    const embroideryCards = document.querySelectorAll('.embroidery-option-card');
+    embroideryCards.forEach(card => {
+        const toggle = () => {
+            const isOpen = card.classList.contains('open');
+            embroideryCards.forEach(c => {
+                c.classList.remove('open');
+                c.setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                card.classList.add('open');
+                card.setAttribute('aria-expanded', 'true');
+            }
+        };
+        card.addEventListener('click', toggle);
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    });
+
+    // Crest images not added yet fall back to a shield placeholder
+    document.querySelectorAll('.embroidery-crest img').forEach(img => {
+        img.addEventListener('error', () => img.classList.add('missing'));
+        if (img.complete && img.naturalWidth === 0) img.classList.add('missing');
+    });
 
     // ==========================================================================
     // EMBROIDERY VIDEO SELECTOR TABS
