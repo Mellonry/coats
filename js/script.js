@@ -1144,10 +1144,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Crest images not added yet fall back to a shield placeholder
-    document.querySelectorAll('.embroidery-crest img').forEach(img => {
-        img.addEventListener('error', () => img.classList.add('missing'));
-        if (img.complete && img.naturalWidth === 0) img.classList.add('missing');
-    });
 });
